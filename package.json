@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"bun run --filter=\"ringo-db\" dev:db\" \"bun run --filter=\"ringo-web\" dev:web\""
+  },
+  "workspaces": ["packages/*"],
+  "dependencies": {},
+  "devDependencies": {
+    "@biomejs/biome": "1.8.1",
+    "concurrently": "^8.2.2",
+    "wrangler": "^3.60.3"
+  }
+}

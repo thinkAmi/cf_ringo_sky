@@ -1,0 +1,14 @@
+name = "ringo-db"
+main = "./src/index.ts"
+compatibility_date = "2024-06-18"
+compatibility_flags = [ "nodejs_compat" ]
+#node_compat = true
+#no_bundle = true
+
+[dev]
+port = 8788
+
+[[d1_databases]]
+binding = "DB" # i.e. available in your Worker on env.DB
+database_name = "ringodb"
+database_id = "01febb3d-148f-4f3c-8fea-e32445da1ae1"

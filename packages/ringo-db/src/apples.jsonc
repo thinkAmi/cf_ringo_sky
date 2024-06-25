@@ -1,0 +1,426 @@
+[
+  {
+    "Name": "あいかの香り",
+    "Color": "Crimson"
+  },
+  {
+    "Name": "秋映",
+    "Color": "DarkRed"
+  },
+  {
+    "Name": "王林",
+    "Color": "YellowGreen"
+  },
+  {
+    "Name": "きおう",
+    "Color": "DarkOrange"
+  },
+  {
+    "Name": "グラニースミス",
+    "Color": "Green"
+  },
+  {
+    "Name": "ゴールデンデリシャス",
+    "Color": "DarkOrange"
+  },
+  {
+    "Name": "紅玉",
+    "Color": "Maroon"
+  },
+  {
+    "Name": "こうたろう",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "さんさ",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "シナノゴールド",
+    "Color": "Gold"
+  },
+  {
+    "Name": "シナノスイート",
+    "Color": "LightCoral"
+  },
+  {
+    "Name": "シナノドルチェ",
+    "Color": "AntiqueWhite"
+  },
+  {
+    "Name": "シナノピッコロ",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "シナノレッド",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "ジョナゴールド",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "新世界",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "清明",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "世界一",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "千秋",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "つがる",
+    "Color": "Brown"
+  },
+  {
+    "Name": "トキ",
+    "Color": "Yellow"
+  },
+  {
+    "Name": "ピンクレディ",
+    "Color": "Pink"
+  },
+  {
+    "Name": "フジ",
+    "Color": "Red"
+  },
+  {
+    "Name": "北斗",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "名月",
+    "Color": "Orange"
+  },
+  {
+    "Name": "陽光",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "早生ふじ",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "アルプス乙女",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "Jazz",
+    "Color": "Coral"
+  },
+  {
+    "Name": "envy",
+    "Color": "Tomato"
+  },
+  {
+    "Name": "祝",
+    "Color": "SpringGreen"
+  },
+  {
+    "Name": "夏あかり",
+    "Color": "MistyRose"
+  },
+  {
+    "Name": "凛夏",
+    "Color": "LavenderBlush"
+  },
+  {
+    "Name": "みよしレッド",
+    "Color": "Orchid"
+  },
+  {
+    "Name": "おいらせ",
+    "Color": "MediumVioletred"
+  },
+  {
+    "Name": "北紅",
+    "Color": "Maroon"
+  },
+  {
+    "Name": "陸奥",
+    "Color": "LemonChiffon"
+  },
+  {
+    "Name": "高徳",
+    "Color": "AntiueWhite"
+  },
+  {
+    "Name": "スリムレッド",
+    "Color": "SeaShell"
+  },
+  {
+    "Name": "インド",
+    "Color": "AliceBlue"
+  },
+  {
+    "Name": "国光",
+    "Color": "FireBrick"
+  },
+  {
+    "Name": "ちなつ",
+    "Color": "Papayawhip"
+  },
+  {
+    "Name": "恋空",
+    "Color": "Rosybrown"
+  },
+  {
+    "Name": "ラリタン",
+    "Color": "OldLace"
+  },
+  {
+    "Name": "夏乙女",
+    "Color": "CornSilk"
+  },
+  {
+    "Name": "ファーストレディ",
+    "Color": "MistyRose"
+  },
+  {
+    "Name": "サマーチャンス",
+    "Color": "BlanchedAlmond"
+  },
+  {
+    "Name": "スカイルビー",
+    "Color": "Lavender"
+  },
+  {
+    "Name": "オータムドレス",
+    "Color": "DarkMagenta"
+  },
+  {
+    "Name": "紅しのぶ",
+    "Color": "MediumVioletred"
+  },
+  {
+    "Name": "ブラムリー",
+    "Color": "Lime"
+  },
+  {
+    "Name": "鏡の私",
+    "Color": "Chartreuse"
+  },
+  {
+    "Name": "あかぎ",
+    "Color": "AntiqueWhite"
+  },
+  {
+    "Name": "ほのか",
+    "Color": "LightPink"
+  },
+  {
+    "Name": "もりのかがやき",
+    "Color": "PaleGoldenrod"
+  },
+  {
+    "Name": "星の金貨",
+    "Color": "Goldenrod"
+  },
+  {
+    "Name": "はるか",
+    "Color": "LightYellow"
+  },
+  {
+    "Name": "秋田ゴールド",
+    "Color": "Goldenrod"
+  },
+  {
+    "Name": "松本錦",
+    "Color": "Orchid"
+  },
+  {
+    "Name": "紅露",
+    "Color": "FloralWhite"
+  },
+  {
+    "Name": "シナノプッチ",
+    "Color": "OldLace"
+  },
+  {
+    "Name": "ひめかみ",
+    "Color": "IndianRed"
+  },
+  {
+    "Name": "超さん太",
+    "Color": "FireBrick"
+  },
+  {
+    "Name": "紅陽光",
+    "Color": "FireBrick"
+  },
+  {
+    "Name": "新生",
+    "Color": "DarkSalmon"
+  },
+  {
+    "Name": "秋陽",
+    "Color": "Crimson"
+  },
+  {
+    "Name": "昂林",
+    "Color": "MistyRose"
+  },
+  {
+    "Name": "蜜っ娘",
+    "Color": "CornSilk"
+  },
+  {
+    "Name": "デリシャス",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "スターキング",
+    "Color": "Crimson"
+  },
+  {
+    "Name": "レッドゴールド",
+    "Color": "Red"
+  },
+  {
+    "Name": "さとあかり",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "大紅栄",
+    "Color": "FireBrick"
+  },
+  {
+    "Name": "ほおずり",
+    "Color": "Brown"
+  },
+  {
+    "Name": "となみ",
+    "Color": "Brown"
+  },
+  {
+    "Name": "しなの姫",
+    "Color": "Crimson"
+  },
+  {
+    "Name": "未来ふじ",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "三島ふじ",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "美丘",
+    "Color": "MistyRose"
+  },
+  {
+    "Name": "未希ライフ",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "紅ロマン",
+    "Color": "FireBrick"
+  },
+  {
+    "Name": "ジャンボ王林",
+    "Color": "YellowGreen"
+  },
+  {
+    "Name": "シナノプッチ",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "金星",
+    "Color": "Palegoldenrod"
+  },
+  {
+    "Name": "ハックナイン",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "信濃あかり",
+    "Color": "Crimson"
+  },
+  {
+    "Name": "シナノホッペ",
+    "Color": "FireBrick"
+  },
+  {
+    "Name": "青林",
+    "Color": "PaleGoldenrod"
+  },
+  {
+    "Name": "Rockit",
+    "Color": "FireBrick"
+  },
+  {
+    "Name": "Queen",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "ムーンルージュ",
+    "Color": "Palegoldenrod"
+  },
+  {
+    "Name": "さとあかり",
+    "Color": "LightSalmon"
+  },
+  {
+    "Name": "Breeze",
+    "Color": "Brown"
+  },
+  {
+    "Name": "シナノリップ",
+    "Color": "FireBrick"
+  },
+  {
+    "Name": "すわっこ",
+    "Color": "FireBrick"
+  },
+  {
+    "Name": "千雪",
+    "Color": "MediumVioletred"
+  },
+  {
+    "Name": "真紅",
+    "Color": "FireBrick"
+  },
+  {
+    "Name": "炎舞",
+    "Color": "FireBrick"
+  },
+  {
+    "Name": "甘い夢",
+    "Color": "FireBrick"
+  },
+  {
+    "Name": "cheekie",
+    "Color": "MediumVioletred"
+  },
+  {
+    "Name": "奥州ロマン",
+    "Color": "FireBrick"
+  },
+  {
+    "Name": "秋茜",
+    "Color": "FireBrick"
+  },
+  {
+    "Name": "おぜの紅",
+    "Color": "FireBrick"
+  },
+  {
+    "Name": "華宝",
+    "Color": "FireBrick"
+  },
+  {
+    "Name": "キュート",
+    "Color": "Palegoldenrod"
+  },
+  {
+    "Name": "紅の夢",
+    "Color": "FireBrick"
+  }
+]
