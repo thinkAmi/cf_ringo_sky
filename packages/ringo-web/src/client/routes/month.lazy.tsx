@@ -11,6 +11,7 @@ import {
   Chart as chartJs,
 } from 'chart.js'
 import { Line } from 'react-chartjs-2'
+import { LinkArea } from '../components/LinkArea'
 import { useFeedsApi } from '../hooks/useFeedsApi'
 import { htmlLegendPlugin } from '../plugins/appleLegendPlugin'
 
@@ -87,6 +88,7 @@ const Component = () => {
   return (
     <>
       <ChartComponent />
+      <LinkArea to={'/'} text={'合計数量へ'} />
     </>
   )
 }

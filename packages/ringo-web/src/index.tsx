@@ -4,6 +4,7 @@ import { renderToString } from 'react-dom/server'
 const app = new Hono()
 
 const totalRoute = app.get('/api/total', async (c) => {
+  // @ts-ignore
   const total = await c.env.RINGO_DB_WORKER.calculateTotalByName()
 
   // ServiceBindingからの戻り値はJSON文字列なので、いったんJavaScriptオブジェクトに戻す
@@ -13,6 +14,7 @@ const totalRoute = app.get('/api/total', async (c) => {
 
 const monthRoute = app.get('/api/month', async (c) => {
   const totalByMonth =
+    // @ts-ignore
     await c.env.RINGO_DB_WORKER.calculateTotalByNameAndMonth()
 
   const r = JSON.parse(totalByMonth)

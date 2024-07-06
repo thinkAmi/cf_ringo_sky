@@ -1,5 +1,4 @@
 import { WorkerEntrypoint } from 'cloudflare:workers'
-import type { D1Database } from '@cloudflare/workers-types'
 import { desc, sql } from 'drizzle-orm'
 import { drizzle } from 'drizzle-orm/d1'
 import { feeds } from '../db/schema/feeds'
@@ -9,12 +8,12 @@ interface Env {
   DB: D1Database
 }
 
-export class DatabaseWorkerEntrypoint extends WorkerEntrypoint {
+export class DatabaseWorkerEntrypoint extends WorkerEntrypoint<Env> {
   async calculateTotalByName() {
-    // this.env で自分の環境のenvを参照できる
+    // this.env で WorkerEntrypoint のenvを参照できる
     const db = drizzle(this.env.DB)
 
-    const results: any[] = await db
+    const results = await db
       .select({
         name: feeds.name,
         total: sql<number>`cast(count(${feeds.id}) as int)`,
@@ -116,10 +115,43 @@ export class DatabaseWorkerEntrypoint extends WorkerEntrypoint {
 
     return JSON.stringify(r)
   }
+
+  async insertFeeds(ringoFeeds: string) {
+    // JSON文字列でわたってくるので、オブジェクトにする
+    const r = JSON.parse(ringoFeeds)
+    const v = r.map((fields) => {
+      // 属性名は、db/schema/feeds.ts で定義した名前にすること
+      return {
+        name: fields.name,
+        content: fields.text,
+        createdAt: formatDateTime(fields.createdAt),
+        snsId: fields.cid,
+      }
+    })
+
+    const db = drizzle(this.env.DB)
+
+    // Drizzle ORMの batch API を使ってトランザクションっぽく更新する
+    // https://orm.drizzle.team/docs/batch-api
+    await db.batch([db.insert(feeds).values(v)])
+  }
+}
+
+const formatDateTime = (iso8601DateTime: string) => {
+  const d = new Date(iso8601DateTime)
+
+  const year = d.getFullYear()
+  const month = String(d.getMonth() + 1).padStart(2, '0')
+  const day = String(d.getDate()).padStart(2, '0')
+  const hours = String(d.getHours()).padStart(2, '0')
+  const minutes = String(d.getMinutes()).padStart(2, '0')
+  const seconds = String(d.getSeconds()).padStart(2, '0')
+
+  return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`
 }
 
 export default {
-  async fetch(_req, env: Env, ctx) {
+  async fetch(_req, _env, _ctx): Promise<Response> {
     return new Response('Hello')
   },
 }

@@ -1,0 +1,17 @@
+{
+  "name": "ringo-bsky",
+  "type": "module",
+  "module": "src/index.ts",
+  "scripts": {
+    "job:dev": "wrangler dev --test-scheduled"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@atproto/api": "^0.12.23"
+  }
+}
