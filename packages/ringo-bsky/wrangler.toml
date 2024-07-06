@@ -7,14 +7,6 @@ kv_namespaces = [
     { binding = "LAST_SEARCH_KV", id = "f6f608a04340492d87d3a10b0210cfa8", preview_id = "54ad69fc39bc429597e55ed0fe7acdd9" }
 ]
 
-#[[kv_namespaces]]
-#binding = "LAST_CURSOR_KV"
-#id = "f6f608a04340492d87d3a10b0210cfa8"
-#
-#[[kv_namespaces]]
-#binding = "LAST_CURSOR_KV"
-#preview_id = "54ad69fc39bc429597e55ed0fe7acdd9"
-
 [dev]
 port = 8789
 
@@ -26,3 +18,7 @@ APP_PASSWORD = ""
 binding = "RINGO_DB_WORKER"
 service = "ringo-db"
 entrypoint = "DatabaseWorkerEntrypoint"
+
+[triggers]
+# 毎日午前3時に起動
+crons = [ "0 3 * * *" ]
