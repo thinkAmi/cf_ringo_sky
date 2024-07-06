@@ -8,6 +8,6 @@
   "devDependencies": {
     "@biomejs/biome": "1.8.1",
     "concurrently": "^8.2.2",
-    "wrangler": "^3.60.3"
+    "wrangler": "^3.63.1"
   }
 }
