@@ -10,15 +10,12 @@ kv_namespaces = [
 [dev]
 port = 8789
 
-[vars]
-IDENTIFIER = ""
-APP_PASSWORD = ""
-
 [[services]]
 binding = "RINGO_DB_WORKER"
 service = "ringo-db"
 entrypoint = "DatabaseWorkerEntrypoint"
 
 [triggers]
-# 毎日午前3時に起動
-crons = [ "0 3 * * *" ]
+# 毎日、日本時間の午前3時に起動
+# なお、設定する時間はUTCなことに注意
+crons = [ "0 18 * * *" ]

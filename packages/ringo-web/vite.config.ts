@@ -27,7 +27,9 @@ export default defineConfig(async ({ mode }) => {
       external: ['react', 'react-dom'],
     },
     plugins: [
-      pages(),
+      pages({
+        entry: ['src/index.tsx'],
+      }),
       devServer({
         entry: 'src/index.tsx',
         env: env,

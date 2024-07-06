@@ -5,13 +5,15 @@
     "dev:web": "vite",
     "build": "vite build",
     "preview": "wrangler pages dev",
-    "deploy": "$npm_execpath run build && wrangler pages deploy"
+    "build:fe": "vite build --mode client",
+    "build:be": "vite build",
+    "deploy": "wrangler pages deploy dist"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.45.1",
     "@tanstack/react-router": "^1.38.1",
     "chart.js": "^4.4.3",
-    "hono": "^4.4.6",
+    "hono": "^4.4.12",
     "react": "^18.3.1",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.3.1",

@@ -3,7 +3,8 @@
   "module": "src/index.ts",
   "type": "module",
   "scripts": {
-    "dev:db": "wrangler dev"
+    "dev:db": "wrangler dev",
+    "deploy": "wrangler deploy --minify"
   },
   "devDependencies": {
     "@types/bun": "latest",

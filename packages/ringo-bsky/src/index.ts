@@ -38,14 +38,17 @@ class Bsky {
       password: this.env.APP_PASSWORD || '',
     })
 
-    // TODO: デバッグ用なので、後で消す
-    await this.env.LAST_SEARCH_KV.delete(BSKY_KV_KEY)
-
     const { bskyFeeds } = await this.fetchAuthorFeeds(agent)
 
     const lastSearchCreatedAt =
       (await this.env.LAST_SEARCH_KV.get(BSKY_KV_KEY)) ?? ''
     const newFeeds = this.filterNewFeeds(bskyFeeds, lastSearchCreatedAt)
+
+    // 新しいfeedを取得できない場合、bskyに新しい投稿をしていないと判断できるので、処理終了とする
+    if (newFeeds.length === 0) {
+      return
+    }
+
     const ringoFeeds = this.filterRingoFeeds(newFeeds)
 
     // 後で追跡できるよう、ログに登録したリンゴの投稿を書き込んでおく

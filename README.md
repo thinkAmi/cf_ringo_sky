@@ -15,7 +15,7 @@ Blueskyの投稿は、先頭に`[リンゴ]`があり、品種名を `` ` ``(バ
 
   
 また、Cloudflare Pages と Workers へデプロイしてあります。  
-★リンク★
+https://ringosky.thinkami.dev/
 
 　
 # 開発環境

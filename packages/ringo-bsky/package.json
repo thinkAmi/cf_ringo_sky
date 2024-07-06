@@ -3,7 +3,8 @@
   "type": "module",
   "module": "src/index.ts",
   "scripts": {
-    "job:dev": "wrangler dev --test-scheduled"
+    "dev:job": "wrangler dev --test-scheduled",
+    "deploy": "wrangler deploy --minify"
   },
   "devDependencies": {
     "@types/bun": "latest"

@@ -1,5 +1,6 @@
 name = "ringo-web"
 pages_build_output_dir = "./dist"
+compatibility_date = "2024-06-18"
 
 [[services]]
 # ソースコードの中で参照する名前
@@ -11,22 +12,3 @@ service = "ringo-db"
 
 # Workersでexportされたクラス名を設定
 entrypoint = "DatabaseWorkerEntrypoint"
-
-# [vars]
-# MY_VAR = "my-variable"
-
-# [[kv_namespaces]]
-# binding = "MY_KV_NAMESPACE"
-# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-
-# [[r2_buckets]]
-# binding = "MY_BUCKET"
-# bucket_name = "my-bucket"
-
-# [[d1_databases]]
-# binding = "DB"
-# database_name = "my-database"
-# database_id = ""
-
-# [ai]
-# binding = "AI"
