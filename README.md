@@ -30,6 +30,8 @@ MIT
 　  
 # ブログ記事
 
+- [Cloudflare Pages・Workers + Hono + React + Chart.js で食べたリンゴの割合をグラフ化してみた - メモ的な思考的な](https://thinkami.hatenablog.com/entry/2024/07/09/235549)
+
 　
 # 過去に作った似たようなもの
 
