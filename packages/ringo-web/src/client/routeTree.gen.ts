@@ -16,10 +16,18 @@ import { Route as rootRoute } from './routes/__root'
 
 // Create Virtual Routes
 
+const PedigreechartLazyImport = createFileRoute('/pedigree_chart')()
 const MonthLazyImport = createFileRoute('/month')()
 const IndexLazyImport = createFileRoute('/')()
 
 // Create/Update Routes
+
+const PedigreechartLazyRoute = PedigreechartLazyImport.update({
+  path: '/pedigree_chart',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() =>
+  import('./routes/pedigree_chart.lazy').then((d) => d.Route),
+)
 
 const MonthLazyRoute = MonthLazyImport.update({
   path: '/month',
@@ -49,6 +57,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MonthLazyImport
       parentRoute: typeof rootRoute
     }
+    '/pedigree_chart': {
+      id: '/pedigree_chart'
+      path: '/pedigree_chart'
+      fullPath: '/pedigree_chart'
+      preLoaderRoute: typeof PedigreechartLazyImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -57,6 +72,7 @@ declare module '@tanstack/react-router' {
 export const routeTree = rootRoute.addChildren({
   IndexLazyRoute,
   MonthLazyRoute,
+  PedigreechartLazyRoute,
 })
 
 /* prettier-ignore-end */
@@ -68,7 +84,8 @@ export const routeTree = rootRoute.addChildren({
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/month"
+        "/month",
+        "/pedigree_chart"
       ]
     },
     "/": {
@@ -76,6 +93,9 @@ export const routeTree = rootRoute.addChildren({
     },
     "/month": {
       "filePath": "month.lazy.tsx"
+    },
+    "/pedigree_chart": {
+      "filePath": "pedigree_chart.lazy.tsx"
     }
   }
 }
