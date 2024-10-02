@@ -435,6 +435,34 @@ const appleSet: Set<Apple> = new Set([
     name: 'Prince',
     color: 'Brown',
   },
+  {
+    name: 'ニュージョナゴールド',
+    color: 'LightSalmon',
+  },
+  {
+    name: 'ローズパール',
+    color: 'Pink',
+  },
+  {
+    name: 'ベル・ド・ボスクープ',
+    color: 'OliveDrab',
+  },
+  {
+    name: 'エグレモント・ラセット',
+    color: 'Tan',
+  },
+  {
+    name: 'ブレンハイム・オレンジ',
+    color: 'DarkSeaGreen',
+  },
+  {
+    name: 'サマーランド',
+    color: 'LightCoral',
+  },
+  {
+    name: 'ルビースイート',
+    color: 'Pink',
+  },
 ])
 
 export const apples = [...appleSet]
