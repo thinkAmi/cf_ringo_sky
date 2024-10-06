@@ -4,7 +4,7 @@ type Apple = {
 }
 
 export const findColorName = (name: string | null) =>
-  apples.find((a) => a.name === name)?.color ?? 'red'
+  appleColors.find((a) => a.name === name)?.color ?? 'red'
 
 const appleSet: Set<Apple> = new Set([
   {
@@ -465,4 +465,4 @@ const appleSet: Set<Apple> = new Set([
   },
 ])
 
-export const apples = [...appleSet]
+export const appleColors = [...appleSet]

@@ -3,7 +3,7 @@ import type { Chart, LegendItem } from 'chart.js'
 type ChartType = Chart<'pie'> | Chart<'line'>
 
 const getOrCreateLegendDiv = () => {
-  const legendContainer = document.getElementById('apples-legend')
+  const legendContainer = document.getElementById('appleColors-legend')
   let divContainer = legendContainer?.querySelector('div')
   if (divContainer) return divContainer
 

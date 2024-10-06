@@ -1,4 +1,5 @@
-import { createLazyRoute } from '@tanstack/react-router'
+import { useSuspenseQuery } from '@tanstack/react-query'
+import { createFileRoute } from '@tanstack/react-router'
 import {
   CategoryScale,
   Filler,
@@ -11,9 +12,9 @@ import {
   Chart as chartJs,
 } from 'chart.js'
 import { Line } from 'react-chartjs-2'
-import { LinkArea } from '../components/LinkArea'
-import { useFeedsApi } from '../hooks/useFeedsApi'
 import { htmlLegendPlugin } from '../plugins/appleLegendPlugin'
+import { totalByMonthQueryOptions } from './-api/totalByMonth'
+import { TitleWithMenu } from './-components/TitleWithMenu'
 
 const ChartComponent = () => {
   chartJs.register(
@@ -39,16 +40,14 @@ const ChartComponent = () => {
   //   Error: Cannot read properties of undefined (reading 'legend')
   // chartJs.overrides.line.plugins.legend.display = false
 
-  const { calculateTotalByMonth } = useFeedsApi()
-  const { data, isLoading } = calculateTotalByMonth()
-  if (isLoading) return <div>Loading...</div>
-  if (!data) return
+  const data = useSuspenseQuery(totalByMonthQueryOptions).data
+  if (!data) {
+    return
+  }
 
   return (
     <>
-      <h2 style={{ display: 'flex', justifyContent: 'center' }}>
-        食べたリンゴたち(月別)
-      </h2>
+      <TitleWithMenu title={'食べたリンゴたち(月別)'} />
       <div
         style={{
           display: 'flex',
@@ -68,7 +67,7 @@ const ChartComponent = () => {
             <Line data={data} plugins={[htmlLegendPlugin]} options={options} />
           </div>
           <div
-            id={'apples-legend'}
+            id={'appleColors-legend'}
             style={{
               maxHeight: '100%',
               overflowY: 'auto',
@@ -88,11 +87,12 @@ const Component = () => {
   return (
     <>
       <ChartComponent />
-      <LinkArea to={'/'} text={'合計数量へ'} />
     </>
   )
 }
 
-export const Route = createLazyRoute('/month')({
+export const Route = createFileRoute('/month')({
   component: Component,
+  loader: async ({ context: { queryClient } }) =>
+    await queryClient.ensureQueryData(totalByMonthQueryOptions),
 })
