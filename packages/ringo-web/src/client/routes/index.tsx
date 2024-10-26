@@ -1,26 +1,24 @@
-import { createLazyRoute } from '@tanstack/react-router'
+import { useSuspenseQuery } from '@tanstack/react-query'
+import { createFileRoute } from '@tanstack/react-router'
 import { ArcElement, Legend, Tooltip, Chart as chartJs } from 'chart.js'
 import { Pie } from 'react-chartjs-2'
-import { LinkArea } from '../components/LinkArea'
-import { useFeedsApi } from '../hooks/useFeedsApi'
 import { htmlLegendPlugin } from '../plugins/appleLegendPlugin'
+import { totalQueryOptions } from './-api/total'
+import { TitleWithMenu } from './-components/TitleWithMenu'
 
 const ChartComponent = () => {
   chartJs.register(ArcElement, Tooltip, Legend)
   // デフォルトのLegendはCanvasに描いているので表示しないようにする
   chartJs.overrides.pie.plugins.legend.display = false
 
-  const { calculateTotal } = useFeedsApi()
-  const { data, isLoading } = calculateTotal()
-
-  if (isLoading) return <div>Loading...</div>
-  if (!data) return
+  const data = useSuspenseQuery(totalQueryOptions).data
+  if (!data) {
+    return
+  }
 
   return (
     <>
-      <h2 style={{ display: 'flex', justifyContent: 'center' }}>
-        食べたリンゴたち
-      </h2>
+      <TitleWithMenu title={'食べたリンゴたち'} />
       <div
         style={{
           display: 'flex',
@@ -41,7 +39,7 @@ const ChartComponent = () => {
             <Pie data={data} plugins={[htmlLegendPlugin]} />
           </div>
           <div
-            id={'apples-legend'}
+            id={'appleColors-legend'}
             style={{
               maxHeight: '100%',
               overflowY: 'auto',
@@ -61,11 +59,12 @@ const Component = () => {
   return (
     <>
       <ChartComponent />
-      <LinkArea to={'/month'} text={'月別数量へ'} />
     </>
   )
 }
 
-export const Route = createLazyRoute('/')({
+export const Route = createFileRoute('/')({
   component: Component,
+  loader: async ({ context: { queryClient } }) =>
+    await queryClient.ensureQueryData(totalQueryOptions),
 })

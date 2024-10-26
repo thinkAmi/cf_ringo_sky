@@ -8,6 +8,20 @@
       "when": 1718666514522,
       "tag": "0000_wild_pride",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1728093012020,
+      "tag": "0001_youthful_beyonder",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1728093091795,
+      "tag": "0002_fearless_gunslinger",
+      "breakpoints": true
     }
   ]
 }
