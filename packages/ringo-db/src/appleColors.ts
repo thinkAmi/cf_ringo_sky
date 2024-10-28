@@ -463,6 +463,46 @@ const appleSet: Set<Apple> = new Set([
     name: 'ルビースイート',
     color: 'Pink',
   },
+  {
+    name: 'モーレンズジョナゴレッド',
+    color: 'FireBrick',
+  },
+  {
+    name: '黄香',
+    color: 'Goldenrod',
+  },
+  {
+    name: '紅将軍',
+    color: 'FireBrick',
+  },
+  {
+    name: '大夢',
+    color: 'FireBrick',
+  },
+  {
+    name: 'あまみつき',
+    color: 'Goldenrod',
+  },
+  {
+    name: '明秋',
+    color: 'FireBrick',
+  },
+  {
+    name: '彩香',
+    color: 'FireBrick',
+  },
+  {
+    name: 'しおりルビー',
+    color: 'FireBrick',
+  },
+  {
+    name: '紅いわて',
+    color: 'FireBrick',
+  },
+  {
+    name: 'きたろう',
+    color: 'Goldenrod',
+  },
 ])
 
 export const appleColors = [...appleSet]
