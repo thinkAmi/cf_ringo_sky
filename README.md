@@ -81,7 +81,7 @@ bun run deploy
 　  
 ## ringo-web ディレクトリ
 
-Cloudflare Pages `ringo-db` のデプロイ関連の作業です。
+Cloudflare Pages `ringo-web` のデプロイ関連の作業です。
 
 ### デプロイの種類
 
