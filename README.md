@@ -21,7 +21,7 @@ https://ringosky.thinkami.dev/
 # 開発環境
 
 - macOS (以前は WSL2 Ubuntu 22.04.1 LTS)
-- Bun 1.1.13 ([mise](https://mise.jdx.dev/) で管理: `mise.toml`)
+- Bun 1.3.14 ([mise](https://mise.jdx.dev/) で管理: `mise.toml`)
 - wrangler はリポジトリの devDependency を使うため、`bunx wrangler` で実行する（グローバルインストールは不要）
 
 
@@ -69,13 +69,13 @@ bunx wrangler d1 execute ringodb --local --file=seed/apples_and_genealogies.sql 
 　  
 ## 起動
 
-リポジトリルートで実行すると、`ringo-db` (port 8788) と `ringo-web` (Vite, port 5173) が同時に起動します。
+リポジトリルートで実行すると、先に `ringo-db` (port 8788) が起動し、その応答を待ってから `ringo-web` (Vite, port 5173) が起動します。
 
 ```
 bun run dev
 ```
 
-なお、`ringo-web` は `ringo-db` へのサービスバインディングに依存しているため、単独では動作しません。
+なお、`ringo-web` は `ringo-db` へのサービスバインディングに依存しているため、単独では動作しません。両者を同時起動すると `ringo-web` のプロキシが `ringo-db` の dev セッション登録より先に接続してしまい binding を張れないため、`bun run dev`（`scripts/dev.sh`）は起動順を制御しています。
 
 　  
 ## 動作確認URL
