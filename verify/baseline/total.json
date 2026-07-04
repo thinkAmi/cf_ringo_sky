@@ -1,0 +1,28 @@
+{
+  "datasets": [
+    {
+      "backgroundColor": [
+        "DarkRed",
+        "YellowGreen",
+        "DarkOrange"
+      ],
+      "borderColor": [
+        "DarkRed",
+        "YellowGreen",
+        "DarkOrange"
+      ],
+      "borderWidth": 1,
+      "data": [
+        3,
+        2,
+        1
+      ],
+      "label": "食べた数"
+    }
+  ],
+  "labels": [
+    "秋映",
+    "王林",
+    "きおう"
+  ]
+}

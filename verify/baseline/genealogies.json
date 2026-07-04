@@ -1,0 +1,130 @@
+[
+  {
+    "appleDisplayName": "デリシャス",
+    "appleName": "delicious",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "不明",
+    "seedName": "unknown"
+  },
+  {
+    "appleDisplayName": "フジ",
+    "appleName": "fuji",
+    "pollenDisplayName": "デリシャス",
+    "pollenName": "delicious",
+    "seedDisplayName": "国光",
+    "seedName": "kokkou"
+  },
+  {
+    "appleDisplayName": "ゴールデンデリシャス",
+    "appleName": "golden_delicious",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "不明",
+    "seedName": "unknown"
+  },
+  {
+    "appleDisplayName": "印度",
+    "appleName": "indo",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "不明",
+    "seedName": "unknown"
+  },
+  {
+    "appleDisplayName": "国光",
+    "appleName": "kokkou",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "不明",
+    "seedName": "unknown"
+  },
+  {
+    "appleDisplayName": "紅玉",
+    "appleName": "kougyoku",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "不明",
+    "seedName": "unknown"
+  },
+  {
+    "appleDisplayName": "奥州ロマン",
+    "appleName": "ohshu_roman",
+    "pollenDisplayName": "つがる",
+    "pollenName": "tsugaru",
+    "seedDisplayName": "シナノゴールド",
+    "seedName": "shinano_gold"
+  },
+  {
+    "appleDisplayName": "千秋",
+    "appleName": "senshu",
+    "pollenDisplayName": "フジ",
+    "pollenName": "fuji",
+    "seedDisplayName": "東光",
+    "seedName": "toukou"
+  },
+  {
+    "appleDisplayName": "シナノドルチェ",
+    "appleName": "shinano_dolce",
+    "pollenDisplayName": "つがる",
+    "pollenName": "tsugaru",
+    "seedDisplayName": "フジ",
+    "seedName": "fuji"
+  },
+  {
+    "appleDisplayName": "シナノゴールド",
+    "appleName": "shinano_gold",
+    "pollenDisplayName": "千秋",
+    "pollenName": "senshu",
+    "seedDisplayName": "ゴールデンデリシャス",
+    "seedName": "golden_delicious"
+  },
+  {
+    "appleDisplayName": "シナノリップ",
+    "appleName": "shinano_lip",
+    "pollenDisplayName": "シナノレッド",
+    "pollenName": "shinano_red",
+    "seedDisplayName": "千秋",
+    "seedName": "senshu"
+  },
+  {
+    "appleDisplayName": "シナノレッド",
+    "appleName": "shinano_red",
+    "pollenDisplayName": "ビスタベラ",
+    "pollenName": "vista_bella",
+    "seedDisplayName": "つがる",
+    "seedName": "tsugaru"
+  },
+  {
+    "appleDisplayName": "シナノスイート",
+    "appleName": "shinano_sweet",
+    "pollenDisplayName": "つがる",
+    "pollenName": "tsugaru",
+    "seedDisplayName": "フジ",
+    "seedName": "fuji"
+  },
+  {
+    "appleDisplayName": "東光",
+    "appleName": "toukou",
+    "pollenDisplayName": "印度",
+    "pollenName": "indo",
+    "seedDisplayName": "ゴールデンデリシャス",
+    "seedName": "golden_delicious"
+  },
+  {
+    "appleDisplayName": "つがる",
+    "appleName": "tsugaru",
+    "pollenDisplayName": "紅玉",
+    "pollenName": "kougyoku",
+    "seedDisplayName": "ゴールデンデリシャス",
+    "seedName": "golden_delicious"
+  },
+  {
+    "appleDisplayName": "ビスタベラ",
+    "appleName": "vista_bella",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "不明",
+    "seedName": "unknown"
+  }
+]

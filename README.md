@@ -145,6 +145,42 @@ curl "http://localhost:8789/__scheduled"
 
 
 　  
+# 検証
+
+型チェック・単体テスト・API のゴールデンスナップショット検証をコマンドで実行できます。いずれもリポジトリルートで実行します。
+
+　  
+## 型チェック
+
+全パッケージの `tsc --noEmit` をまとめて実行します。
+
+```
+bun run typecheck
+```
+
+　  
+## 単体テスト
+
+`ringo-bsky` の純粋関数（`matchName` / `filterNewFeeds` / `filterRingoFeeds` / `latestCreatedAt`）を Bun 内蔵のテストランナーで検証します。
+
+```
+bun run test
+```
+
+　  
+## API のゴールデンスナップショット検証
+
+`verify/verify.sh` は、検証用のローカル D1 に seed と決定的な feeds データ（`verify/feeds_fixture.sql`）を投入し、`ringo-db` と `ringo-web` を起動して4つの API（`/api/total` `/api/month` `/api/genealogies` `/api/genealogies/:name`）を取得、`verify/baseline/` のスナップショットと突き合わせます。差分があれば失敗（exit 1）します。
+
+```
+bun run verify              # baseline と比較
+./verify/verify.sh --update # baseline を再生成
+```
+
+- `jq` が必要です。
+- 検証用の D1 状態は `--persist-to` で開発用（`.wrangler/state`）と隔離しているため、実行しても開発用の `feeds` データは変更されません。
+
+　  
 # ライセンス
 MIT
 

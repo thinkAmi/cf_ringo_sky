@@ -1,7 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "dev": "concurrently \"bun run --filter=\"ringo-db\" dev:db\" \"bun run --filter=\"ringo-web\" dev:web\""
+    "dev": "concurrently \"bun run --filter=\"ringo-db\" dev:db\" \"bun run --filter=\"ringo-web\" dev:web\"",
+    "typecheck": "bun run --filter='*' typecheck",
+    "test": "bun run --filter=ringo-bsky test",
+    "verify": "./verify/verify.sh"
   },
   "workspaces": ["packages/*"],
   "dependencies": {},
