@@ -20,7 +20,128 @@ https://ringosky.thinkami.dev/
 　
 # 開発環境
 
-- WSL2 Ubuntu 22.04.1 LTS
+- macOS (以前は WSL2 Ubuntu 22.04.1 LTS)
+- Bun 1.1.13 ([mise](https://mise.jdx.dev/) で管理: `mise.toml`)
+- wrangler はリポジトリの devDependency を使うため、`bunx wrangler` で実行する（グローバルインストールは不要）
+
+
+　  
+# 環境構築（ローカル）
+
+## 前提ツールの導入
+
+Bun のバージョンは mise で管理しています。
+
+```
+mise install
+```
+
+　  
+## 依存パッケージのインストール
+
+Bun workspaces のモノレポのため、リポジトリルートで1回だけ実行します。各パッケージ内での install は不要です（入れ子の `bun.lockb` を作らないこと）。
+
+```
+bun install
+```
+
+　  
+## Cloudflareへの認証
+
+本番の D1 や KV を操作する場合、およびデプロイする場合に必要です（ローカル開発のみなら不要）。
+
+```
+bunx wrangler login
+bunx wrangler whoami
+```
+
+　  
+## ローカルD1の初期化
+
+D1 のバインディングは `packages/ringo-db/wrangler.toml` に定義されているため、必ず `packages/ringo-db` で実行します。リポジトリルートで実行すると `Couldn't find a D1 DB` エラーになります。
+
+```
+cd packages/ringo-db
+bunx wrangler d1 migrations apply ringodb --local
+bunx wrangler d1 execute ringodb --local --file=seed/apples_and_genealogies.sql --batch-size=1
+```
+
+　  
+## 起動
+
+リポジトリルートで実行すると、`ringo-db` (port 8788) と `ringo-web` (Vite, port 5173) が同時に起動します。
+
+```
+bun run dev
+```
+
+なお、`ringo-web` は `ringo-db` へのサービスバインディングに依存しているため、単独では動作しません。
+
+　  
+## 動作確認URL
+
+| URL | 内容 |
+|---|---|
+| http://localhost:5173/ | 品種別集計グラフ |
+| http://localhost:5173/month | 月別集計グラフ |
+| http://localhost:5173/genealogies | りんご系譜図の一覧 |
+| http://localhost:5173/api/total | 品種別集計API |
+| http://localhost:5173/api/month | 月別集計API |
+| http://localhost:5173/api/genealogies | 系譜図一覧API |
+
+seed で投入されるのは `apples` / `genealogies` テーブルのみで、初期状態では `feeds` テーブルが空です。そのため `/api/total` と `/api/month` が `[]` を返し、集計グラフが表示されませんが、これは異常ではありません。グラフを確認するには、次の「feedsデータの投入」を行います。
+
+　  
+## feedsデータの投入
+
+いずれかの方法で `feeds` テーブルにデータを投入します。動作確認だけなら方法1が手軽です。
+
+### 方法1: 本番D1からデータを取り込む(推奨)
+
+本番の `feeds` テーブルのデータのみをダンプし、ローカルD1へ流し込みます。
+
+```
+cd packages/ringo-db
+bunx wrangler d1 export ringodb --remote --table=feeds --no-schema --output=./prod_feeds.sql
+bunx wrangler d1 execute ringodb --local --file=./prod_feeds.sql
+bunx wrangler d1 execute ringodb --local --command "SELECT count(*) FROM feeds"
+```
+
+- `--no-schema` を付けないと `CREATE TABLE` が出力され、ローカルの既存テーブルと衝突します
+- export 実行中は本番D1が他のリクエストをブロックするため、アクセスの少ない時間帯に実行します
+- 取り込んだ `prod_feeds.sql` は不要になったら削除します
+
+　  
+### 方法2: ringo-bsky でBlueskyから取り込む
+
+`ringo-bsky` は Cron で動くバッチ Worker で、以下のシークレットが必要です。
+
+| 変数 | 内容 |
+|---|---|
+| `IDENTIFIER` | Bluesky のハンドル（ログインと取得対象アカウントの両方に使用） |
+| `APP_PASSWORD` | Bluesky のアプリパスワード |
+
+ローカルでは `packages/ringo-bsky/.dev.vars` に設定します（gitignore済み）。本番へは `bunx wrangler secret put` で登録します。
+
+```
+IDENTIFIER=your-handle.bsky.social
+APP_PASSWORD=xxxx-xxxx-xxxx-xxxx
+```
+
+`ringo-db` と `ringo-bsky` を同時に起動し、スケジュール実行を手動でトリガーします。
+
+```
+# ターミナル1
+cd packages/ringo-db && bun run dev:db
+
+# ターミナル2
+cd packages/ringo-bsky && bun run dev:job
+
+# ターミナル3
+curl "http://localhost:8789/__scheduled"
+```
+
+取り込みが成功すると、`feeds` テーブルに投稿が追加され、KV (`LAST_SEARCH_KV`) に最終取得時刻が保存されます。2回目以降は前回時刻より新しい投稿のみが取り込み対象になります。
 
 
 　  
@@ -46,13 +167,13 @@ bun drizzle-kit generate
 ローカルの場合
 
 ```
-wrangler d1 migrations apply ringodb --local
+bunx wrangler d1 migrations apply ringodb --local
 ```
 
 本番環境の場合
 
 ```
-wrangler d1 migrations apply ringodb --remote
+bunx wrangler d1 migrations apply ringodb --remote
 ```
 
 　  
@@ -62,13 +183,13 @@ wrangler d1 migrations apply ringodb --remote
 ローカルの場合
 
 ```
-wrangler d1 execute ringodb --local --file=seed/apples_and_genealogies.sql --batch-size=1
+bunx wrangler d1 execute ringodb --local --file=seed/apples_and_genealogies.sql --batch-size=1
 ```
 
 本番環境の場合
 
 ```
-wrangler d1 execute ringodb --remote --file=seed/apples_and_genealogies.sql --batch-size=1
+bunx wrangler d1 execute ringodb --remote --file=seed/apples_and_genealogies.sql --batch-size=1
 ```
 
 　  
