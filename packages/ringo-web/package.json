@@ -29,8 +29,6 @@
     "@cloudflare/workers-types": "^4.20240529.0",
     "@hono/vite-cloudflare-pages": "^0.4.1",
     "@hono/vite-dev-server": "^0.12.1",
-    "@tanstack/router-cli": "^1.37.0",
-    "@tanstack/router-devtools": "^1.38.1",
     "@tanstack/router-vite-plugin": "^1.38.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
