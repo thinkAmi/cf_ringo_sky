@@ -10,6 +10,14 @@ interface Env {
   DB: D1Database
 }
 
+// ringo-bsky から JSON 文字列で渡ってくる、DB へ登録する feed の入力形
+type RingoFeedInput = {
+  name: string
+  text: string
+  createdAt: string
+  cid: string
+}
+
 export class DatabaseWorkerEntrypoint extends WorkerEntrypoint<Env> {
   async calculateTotalByName() {
     // this.env で WorkerEntrypoint のenvを参照できる
@@ -120,7 +128,7 @@ export class DatabaseWorkerEntrypoint extends WorkerEntrypoint<Env> {
 
   async insertFeeds(ringoFeeds: string) {
     // JSON文字列でわたってくるので、オブジェクトにする
-    const r = JSON.parse(ringoFeeds)
+    const r = JSON.parse(ringoFeeds) as RingoFeedInput[]
     const v = r.map((fields) => {
       // 属性名は、db/schema/feeds.ts で定義した名前にすること
       return {
@@ -293,7 +301,7 @@ const formatDateTime = (iso8601DateTime: string) => {
 }
 
 export default {
-  async fetch(_req, _env, _ctx): Promise<Response> {
+  async fetch(_req: Request, _env: Env, _ctx: unknown): Promise<Response> {
     return new Response('Hello')
   },
 }

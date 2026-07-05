@@ -1,15 +1,22 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { RouterProvider, createRouter } from '@tanstack/react-router'
-import * as React from 'react'
+import { createRouter, RouterProvider } from '@tanstack/react-router'
+import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { routeTree } from './routeTree.gen'
 
-const queryClient = new QueryClient()
+// loader が throw した際に表示するエラー画面
+const DefaultErrorComponent = ({ error }: { error: Error }) => (
+  <div style={{ padding: '20px' }}>
+    <h1>エラーが発生しました</h1>
+    <p>データの取得に失敗しました。時間をおいて再度お試しください。</p>
+    <pre style={{ color: 'crimson' }}>{error.message}</pre>
+  </div>
+)
+
 const router = createRouter({
   routeTree: routeTree,
-  context: {
-    queryClient,
-  },
+  // loader のキャッシュを 5 分保持し、往復ナビゲーションでの再取得を抑える
+  defaultStaleTime: 1000 * 60 * 5,
+  defaultErrorComponent: DefaultErrorComponent,
 })
 
 declare module '@tanstack/react-router' {
@@ -18,10 +25,11 @@ declare module '@tanstack/react-router' {
   }
 }
 
-createRoot(document.getElementById('root')!).render(
-  <QueryClientProvider client={queryClient}>
-    <React.StrictMode>
+const rootElement = document.getElementById('root')
+if (rootElement) {
+  createRoot(rootElement).render(
+    <StrictMode>
       <RouterProvider router={router} />
-    </React.StrictMode>
-  </QueryClientProvider>,
-)
+    </StrictMode>,
+  )
+}

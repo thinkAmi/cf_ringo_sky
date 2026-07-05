@@ -27,7 +27,7 @@ export const htmlLegendPlugin = {
     const chartLabels = chart?.options?.plugins?.legend?.labels
     if (!chartLabels) return
 
-    // @ts-ignore
+    // @ts-expect-error
     const items = chartLabels.generateLabels(chart)
     if (items === undefined) return
 
@@ -47,7 +47,7 @@ export const htmlLegendPlugin = {
         if (item.index !== undefined) {
           chart.toggleDataVisibility(item.index)
           chart.update()
-        } else if (item.datasetIndex != undefined) {
+        } else if (item.datasetIndex !== undefined) {
           chart.setDatasetVisibility(
             item.datasetIndex,
             !chart.isDatasetVisible(item.datasetIndex),
@@ -59,7 +59,7 @@ export const htmlLegendPlugin = {
       const bg =
         item.index !== undefined
           ? backgroundColors[item.index]
-          : item.datasetIndex != undefined
+          : item.datasetIndex !== undefined
             ? backgroundColors[item.datasetIndex]
             : 'red'
 

@@ -1,9 +1,8 @@
-import { useSuspenseQuery } from '@tanstack/react-query'
 import { createFileRoute } from '@tanstack/react-router'
-import { ArcElement, Legend, Tooltip, Chart as chartJs } from 'chart.js'
+import { ArcElement, Chart as chartJs, Legend, Tooltip } from 'chart.js'
 import { Pie } from 'react-chartjs-2'
 import { htmlLegendPlugin } from '../plugins/appleLegendPlugin'
-import { totalQueryOptions } from './-api/total'
+import { fetchTotal } from './-api/total'
 import { TitleWithMenu } from './-components/TitleWithMenu'
 
 const ChartComponent = () => {
@@ -11,9 +10,11 @@ const ChartComponent = () => {
   // デフォルトのLegendはCanvasに描いているので表示しないようにする
   chartJs.overrides.pie.plugins.legend.display = false
 
-  const data = useSuspenseQuery(totalQueryOptions).data
+  // loader が成功時のみ値を返す(失敗時は throw して errorComponent 表示)。
+  // useLoaderData の型は T | undefined のため、型を満たすガードを置く。
+  const data = Route.useLoaderData()
   if (!data) {
-    return
+    return null
   }
 
   return (
@@ -56,15 +57,10 @@ const ChartComponent = () => {
 }
 
 const Component = () => {
-  return (
-    <>
-      <ChartComponent />
-    </>
-  )
+  return <ChartComponent />
 }
 
 export const Route = createFileRoute('/')({
   component: Component,
-  loader: async ({ context: { queryClient } }) =>
-    await queryClient.ensureQueryData(totalQueryOptions),
+  loader: () => fetchTotal(),
 })

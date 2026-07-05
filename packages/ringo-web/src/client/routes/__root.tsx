@@ -1,28 +1,68 @@
-import type { QueryClient } from '@tanstack/react-query'
-import { Outlet, createRootRouteWithContext } from '@tanstack/react-router'
-import React from 'react'
+import { createRootRoute, Outlet } from '@tanstack/react-router'
 
-const TanStackRouterDevtools =
-  process.env.NODE_ENV === 'production'
-    ? () => null // Render nothing in production
-    : React.lazy(() =>
-        // Lazy load in development
-        import('@tanstack/router-devtools').then((res) => ({
-          default: res.TanStackRouterDevtools,
-          // For Embedded Mode
-          // default: res.TanStackRouterDevtoolsPanel
-        })),
-      )
+// MUI/emotion 撤去に伴う、アプリ全体のスタイル。
+// このアプリは CSR(サーバは空シェルのみ)で CSS リンク機構が無いため、
+// pseudo-class や transition が必要なものは root で <style> として注入する。
+const appStyles = `
+dialog.ringo-menu {
+  margin: 0;
+  height: 100dvh;
+  max-height: 100dvh;
+  padding: 0;
+  border: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  transform: translateX(-100%);
+  transition:
+    transform 0.2s ease,
+    display 0.2s allow-discrete,
+    overlay 0.2s allow-discrete;
+}
+dialog.ringo-menu[open] {
+  transform: translateX(0);
+}
+@starting-style {
+  dialog.ringo-menu[open] {
+    transform: translateX(-100%);
+  }
+}
+dialog.ringo-menu::backdrop {
+  background: rgba(0, 0, 0, 0.3);
+}
 
-export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
-  {
-    component: () => (
-      <>
-        <Outlet />
-        {/*<Suspense>*/}
-        {/*  <TanStackRouterDevtools />*/}
-        {/*</Suspense>*/}
-      </>
-    ),
-  },
-)
+.ringo-menu-item {
+  display: block;
+  padding: 12px 24px;
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+}
+.ringo-menu-item:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.genealogy-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.genealogy-table th,
+.genealogy-table td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 12px 16px;
+  text-align: left;
+}
+.genealogy-table tbody tr {
+  cursor: pointer;
+}
+.genealogy-table tbody tr:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+`
+
+export const Route = createRootRoute({
+  component: () => (
+    <>
+      <style>{appStyles}</style>
+      <Outlet />
+    </>
+  ),
+})

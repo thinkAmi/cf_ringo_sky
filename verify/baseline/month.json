@@ -1,0 +1,78 @@
+{
+  "datasets": [
+    {
+      "backgroundColor": "DarkOrange",
+      "borderColor": "DarkOrange",
+      "data": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "label": "きおう",
+      "tension": 0.1
+    },
+    {
+      "backgroundColor": "YellowGreen",
+      "borderColor": "YellowGreen",
+      "data": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "label": "王林",
+      "tension": 0.1
+    },
+    {
+      "backgroundColor": "DarkRed",
+      "borderColor": "DarkRed",
+      "data": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "label": "秋映",
+      "tension": 0.1
+    }
+  ],
+  "labels": [
+    "1月",
+    "2月",
+    "3月",
+    "4月",
+    "5月",
+    "6月",
+    "7月",
+    "8月",
+    "9月",
+    "10月",
+    "11月",
+    "12月"
+  ]
+}

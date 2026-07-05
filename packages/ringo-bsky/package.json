@@ -4,7 +4,10 @@
   "module": "src/index.ts",
   "scripts": {
     "dev:job": "wrangler dev --test-scheduled",
-    "deploy": "wrangler deploy --minify"
+    "deploy": "wrangler deploy --minify",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "cf-typegen": "wrangler types"
   },
   "devDependencies": {
     "@types/bun": "latest"
@@ -13,6 +16,6 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@atproto/api": "^0.12.23"
+    "@atproto/api": "^0.20.25"
   }
 }

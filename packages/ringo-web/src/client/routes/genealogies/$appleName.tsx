@@ -1,48 +1,16 @@
 import { createFileRoute } from '@tanstack/react-router'
-
-import { useSuspenseQuery } from '@tanstack/react-query'
-
 import { TitleWithMenu } from '../-components/TitleWithMenu'
-import { genealogyQueryOptions } from './-api/genealogy'
+import { fetchGenealogyByName } from './-api/genealogy'
 import { AppleNameCard } from './-components/AppleNameCard'
 
-type Genealogy = {
-  apple: string
-  appleDisplayName: string
-  pollen: string
-  pollenDisplayName: string
-  pollenPollen: string
-  pollenPollenDisplayName: string
-  pollenPollenPollen: string
-  pollenPollenPollenDisplayName: string
-  pollenPollenSeed: string
-  pollenPollenSeedDisplayName: string
-  pollenSeed: string
-  pollenSeedDisplayName: string
-  pollenSeedPollen: string
-  pollenSeedPollenDisplayName: string
-  pollenSeedSeed: string
-  pollenSeedSeedDisplayName: string
-  seed: string
-  seedDisplayName: string
-  seedPollen: string
-  seedPollenDisplayName: string
-  seedPollenPollen: string
-  seedPollenPollenDisplayName: string
-  seedPollenSeed: string
-  seedPollenSeedDisplayName: string
-  seedSeed: string
-  seedSeedDisplayName: string
-  seedSeedPollen: string
-  seedSeedPollenDisplayName: string
-  seedSeedSeed: string
-  seedSeedSeedDisplayName: string
-}
-
 const GenealogyChartComponent = () => {
-  const { appleName } = Route.useParams()
-  const query = useSuspenseQuery(genealogyQueryOptions(appleName))
-  const genealogy: Genealogy = query.data[0]
+  // loader が成功時のみ値を返す(失敗時は throw して errorComponent 表示)。
+  // useLoaderData の型は T | undefined のため、型を満たすガードを置く。
+  const data = Route.useLoaderData()
+  if (!data) {
+    return null
+  }
+  const genealogy = data[0]
 
   return (
     <>
@@ -144,15 +112,10 @@ const GenealogyChartComponent = () => {
 }
 
 const Component = () => {
-  return (
-    <>
-      <GenealogyChartComponent />
-    </>
-  )
+  return <GenealogyChartComponent />
 }
 
 export const Route = createFileRoute('/genealogies/$appleName')({
   component: Component,
-  loader: async ({ context: { queryClient }, params: { appleName } }) =>
-    await queryClient.ensureQueryData(genealogyQueryOptions(appleName)),
+  loader: ({ params: { appleName } }) => fetchGenealogyByName(appleName),
 })

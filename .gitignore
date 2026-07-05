@@ -1,2 +1,11 @@
 .idea/
 node_modules/
+
+# Vite が vite.config.ts 処理時に生成する一時ファイル
+*.timestamp-*.mjs
+
+# wrangler types が生成する型定義(cf-typegen / postinstall で再生成)
+worker-configuration.d.ts
+
+# wrangler のローカル状態・ビルド一時物
+.wrangler/

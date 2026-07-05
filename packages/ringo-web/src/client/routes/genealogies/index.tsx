@@ -1,82 +1,63 @@
-import { DataGrid, type GridColDef } from '@mui/x-data-grid'
-import { useSuspenseQuery } from '@tanstack/react-query'
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
 import { TitleWithMenu } from '../-components/TitleWithMenu'
-import { genealogiesQueryOptions } from './-api/genealogies'
-
-type Genealogy = {
-  appleName: string
-  appleDisplayName: string
-  pollenName: string
-  seedName: string
-}
-
-const columns: GridColDef[] = [
-  {
-    field: 'appleDisplayName',
-    headerName: 'リンゴ名',
-    editable: false,
-    flex: 1,
-  },
-  {
-    field: 'pollenDisplayName',
-    headerName: '花粉親',
-    editable: false,
-    flex: 1,
-  },
-  {
-    field: 'seedDisplayName',
-    headerName: '種子親',
-    editable: false,
-    flex: 1,
-  },
-]
+import { fetchGenealogies } from './-api/genealogies'
 
 const GenealogiesComponent = () => {
   const navigate = useNavigate()
-  const data = useSuspenseQuery(genealogiesQueryOptions).data
+  // loader が成功時のみ値を返す(失敗時は throw して errorComponent 表示)。
+  // useLoaderData の型は T | undefined のため、型を満たすガードを置く。
+  const data = Route.useLoaderData()
+  if (!data) {
+    return null
+  }
 
-  const applesWithId = data.map((d: Genealogy) => {
-    return {
-      id: d.appleName,
-      ...d,
-    }
-  })
-
-  const handleOnRowClick = (params) => {
+  const handleRowClick = (appleName: string) => {
     navigate({
       to: '/genealogies/$appleName',
-      params: { appleName: params.id },
+      params: { appleName },
     })
   }
 
   return (
     <>
       <TitleWithMenu title={'系譜図を表示可能なりんご一覧'} />
-      <DataGrid
-        columns={columns}
-        rows={applesWithId}
-        onRowClick={handleOnRowClick}
-        autosizeOptions={{
-          columns: ['appleDisplayName', 'pollenDisplayName', 'seedDisplayName'],
-          includeHeaders: false,
-          includeOutliers: true,
-        }}
-      />
+      <table className={'genealogy-table'}>
+        <thead>
+          <tr>
+            <th>リンゴ名</th>
+            <th>花粉親</th>
+            <th>種子親</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((d) => (
+            <tr
+              key={d.appleName}
+              tabIndex={0}
+              onClick={() => handleRowClick(d.appleName)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  handleRowClick(d.appleName)
+                }
+              }}
+            >
+              <td>{d.appleDisplayName}</td>
+              <td>{d.pollenDisplayName}</td>
+              <td>{d.seedDisplayName}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </>
   )
 }
 
 const Component = () => {
-  return (
-    <>
-      <GenealogiesComponent />
-    </>
-  )
+  return <GenealogiesComponent />
 }
 
 export const Route = createFileRoute('/genealogies/')({
   component: Component,
-  loader: async ({ context: { queryClient } }) =>
-    await queryClient.ensureQueryData(genealogiesQueryOptions),
+  loader: () => fetchGenealogies(),
 })

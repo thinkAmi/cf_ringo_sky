@@ -14,11 +14,9 @@ export const genealogies = sqliteTable(
       .notNull()
       .references(() => apples.name),
   },
-  (table) => {
-    return {
-      pk: primaryKey({
-        columns: [table.child_name, table.pollen_name, table.seed_name],
-      }),
-    }
-  },
+  (table) => [
+    primaryKey({
+      columns: [table.child_name, table.pollen_name, table.seed_name],
+    }),
+  ],
 )

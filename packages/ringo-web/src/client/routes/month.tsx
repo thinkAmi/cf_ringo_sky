@@ -1,19 +1,18 @@
-import { useSuspenseQuery } from '@tanstack/react-query'
 import { createFileRoute } from '@tanstack/react-router'
 import {
   CategoryScale,
+  Chart as chartJs,
   Filler,
   Legend,
-  LineElement,
   LinearScale,
+  LineElement,
   PointElement,
   Title,
   Tooltip,
-  Chart as chartJs,
 } from 'chart.js'
 import { Line } from 'react-chartjs-2'
 import { htmlLegendPlugin } from '../plugins/appleLegendPlugin'
-import { totalByMonthQueryOptions } from './-api/totalByMonth'
+import { fetchTotalByMonth } from './-api/totalByMonth'
 import { TitleWithMenu } from './-components/TitleWithMenu'
 
 const ChartComponent = () => {
@@ -40,9 +39,11 @@ const ChartComponent = () => {
   //   Error: Cannot read properties of undefined (reading 'legend')
   // chartJs.overrides.line.plugins.legend.display = false
 
-  const data = useSuspenseQuery(totalByMonthQueryOptions).data
+  // loader が成功時のみ値を返す(失敗時は throw して errorComponent 表示)。
+  // useLoaderData の型は T | undefined のため、型を満たすガードを置く。
+  const data = Route.useLoaderData()
   if (!data) {
-    return
+    return null
   }
 
   return (
@@ -84,15 +85,10 @@ const ChartComponent = () => {
 }
 
 const Component = () => {
-  return (
-    <>
-      <ChartComponent />
-    </>
-  )
+  return <ChartComponent />
 }
 
 export const Route = createFileRoute('/month')({
   component: Component,
-  loader: async ({ context: { queryClient } }) =>
-    await queryClient.ensureQueryData(totalByMonthQueryOptions),
+  loader: () => fetchTotalByMonth(),
 })

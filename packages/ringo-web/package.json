@@ -7,37 +7,28 @@
     "preview": "wrangler pages dev",
     "build:fe": "vite build --mode client",
     "build:be": "vite build",
-    "deploy": "wrangler pages deploy dist"
+    "deploy": "wrangler pages deploy dist",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
-    "@mui/icons-material": "^6.1.5",
-    "@mui/material": "^6.1.2",
-    "@mui/x-data-grid": "^7.19.0",
-    "@tanstack/react-query": "^5.45.1",
-    "@tanstack/react-router": "^1.38.1",
-    "chart.js": "^4.4.3",
-    "hono": "^4.4.12",
-    "react": "^18.3.1",
-    "react-chartjs-2": "^5.2.0",
-    "react-dom": "^18.3.1",
+    "@tanstack/react-router": "^1.170.17",
+    "chart.js": "^4.5.1",
+    "hono": "^4.12.27",
+    "react": "^19.2.7",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "^19.2.7",
     "ringo-db": "workspace:*"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240529.0",
-    "@hono/vite-cloudflare-pages": "^0.4.1",
-    "@hono/vite-dev-server": "^0.12.1",
-    "@tanstack/router-cli": "^1.37.0",
-    "@tanstack/router-devtools": "^1.38.1",
-    "@tanstack/router-vite-plugin": "^1.38.0",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "vite": "^5.2.12",
-    "wrangler": "^3.57.2"
+    "@hono/vite-build": "^1.11.1",
+    "@hono/vite-dev-server": "^0.26.0",
+    "@tanstack/router-plugin": "^1.168.19",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "vite": "^8.1.3"
   },
   "peerDependencies": {
-    "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }
