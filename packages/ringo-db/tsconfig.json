@@ -23,6 +23,7 @@
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false,
 
-    "types": ["@cloudflare/workers-types"]
+    // Cloudflare の型は wrangler types 生成の worker-configuration.d.ts で供給する
+    "types": []
   }
 }

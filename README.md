@@ -63,7 +63,7 @@ D1 のバインディングは `packages/ringo-db/wrangler.toml` に定義され
 ```
 cd packages/ringo-db
 bunx wrangler d1 migrations apply ringodb --local
-bunx wrangler d1 execute ringodb --local --file=seed/apples_and_genealogies.sql --batch-size=1
+bunx wrangler d1 execute ringodb --local --file=seed/apples_and_genealogies.sql
 ```
 
 　  
@@ -219,13 +219,13 @@ bunx wrangler d1 migrations apply ringodb --remote
 ローカルの場合
 
 ```
-bunx wrangler d1 execute ringodb --local --file=seed/apples_and_genealogies.sql --batch-size=1
+bunx wrangler d1 execute ringodb --local --file=seed/apples_and_genealogies.sql
 ```
 
 本番環境の場合
 
 ```
-bunx wrangler d1 execute ringodb --remote --file=seed/apples_and_genealogies.sql --batch-size=1
+bunx wrangler d1 execute ringodb --remote --file=seed/apples_and_genealogies.sql
 ```
 
 　  

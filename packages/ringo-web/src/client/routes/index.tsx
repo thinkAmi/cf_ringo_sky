@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { ArcElement, Legend, Tooltip, Chart as chartJs } from 'chart.js'
+import { ArcElement, Chart as chartJs, Legend, Tooltip } from 'chart.js'
 import { Pie } from 'react-chartjs-2'
 import { htmlLegendPlugin } from '../plugins/appleLegendPlugin'
 import { fetchTotal } from './-api/total'
@@ -57,11 +57,7 @@ const ChartComponent = () => {
 }
 
 const Component = () => {
-  return (
-    <>
-      <ChartComponent />
-    </>
-  )
+  return <ChartComponent />
 }
 
 export const Route = createFileRoute('/')({

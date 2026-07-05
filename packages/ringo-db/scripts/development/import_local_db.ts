@@ -1,4 +1,3 @@
-// @ts-ignore
 import { Database } from 'bun:sqlite'
 import { sql } from 'drizzle-orm'
 import { drizzle } from 'drizzle-orm/bun-sqlite'
@@ -27,7 +26,6 @@ const main = async () => {
   )
   const toDb = drizzle(toSqlite)
 
-  // biome-ignore lint/complexity/noForEach: <explanation>
   tweets.forEach(async (t) => {
     await toDb.insert(feeds).values({
       name: t.name,

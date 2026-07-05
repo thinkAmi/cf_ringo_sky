@@ -112,11 +112,7 @@ const GenealogyChartComponent = () => {
 }
 
 const Component = () => {
-  return (
-    <>
-      <GenealogyChartComponent />
-    </>
-  )
+  return <GenealogyChartComponent />
 }
 
 export const Route = createFileRoute('/genealogies/$appleName')({

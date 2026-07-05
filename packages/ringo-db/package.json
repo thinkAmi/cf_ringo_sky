@@ -5,7 +5,8 @@
   "scripts": {
     "dev:db": "wrangler dev",
     "deploy": "wrangler deploy --minify",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "cf-typegen": "wrangler types"
   },
   "devDependencies": {
     "@types/bun": "latest",

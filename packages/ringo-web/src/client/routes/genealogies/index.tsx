@@ -54,11 +54,7 @@ const GenealogiesComponent = () => {
 }
 
 const Component = () => {
-  return (
-    <>
-      <GenealogiesComponent />
-    </>
-  )
+  return <GenealogiesComponent />
 }
 
 export const Route = createFileRoute('/genealogies/')({

@@ -4,12 +4,16 @@
     "dev": "./scripts/dev.sh",
     "typecheck": "bun run --filter='*' typecheck",
     "test": "bun run --filter=ringo-bsky test",
-    "verify": "./verify/verify.sh"
+    "verify": "./verify/verify.sh",
+    "cf-typegen": "bun run --filter='*' cf-typegen",
+    "postinstall": "bun run --filter='*' cf-typegen"
   },
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "dependencies": {},
   "devDependencies": {
-    "@biomejs/biome": "1.8.1",
-    "wrangler": "^3.83.0"
+    "@biomejs/biome": "2.5.2",
+    "wrangler": "^4.106.0"
   }
 }

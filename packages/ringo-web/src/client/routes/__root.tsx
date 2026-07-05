@@ -1,4 +1,4 @@
-import { Outlet, createRootRoute } from '@tanstack/react-router'
+import { createRootRoute, Outlet } from '@tanstack/react-router'
 
 // MUI/emotion 撤去に伴う、アプリ全体のスタイル。
 // このアプリは CSR(サーバは空シェルのみ)で CSS リンク機構が無いため、
@@ -61,8 +61,7 @@ dialog.ringo-menu::backdrop {
 export const Route = createRootRoute({
   component: () => (
     <>
-      {/* biome-ignore lint/security/noDangerouslySetInnerHtml: アプリ全体の静的CSS。ユーザー入力は含まない */}
-      <style dangerouslySetInnerHTML={{ __html: appStyles }} />
+      <style>{appStyles}</style>
       <Outlet />
     </>
   ),

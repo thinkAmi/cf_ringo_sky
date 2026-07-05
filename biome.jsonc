@@ -1,16 +1,20 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.1/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.5.2/schema.json",
   "files": {
-    "ignore": ["verify/baseline/**"]
+    "includes": [
+      "**",
+      "!**/verify/baseline",
+      "!**/worker-configuration.d.ts",
+      "!**/routeTree.gen.ts",
+      "!**/.wrangler",
+      "!**/dist",
+      "!**/migrations/meta"
+    ]
   },
-  "organizeImports": {
-    "enabled": true
-  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
-    "rules": {
-      "all": true
-    }
+    "rules": {}
   },
   "formatter": {
     "indentStyle": "space"

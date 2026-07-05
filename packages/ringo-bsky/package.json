@@ -6,7 +6,8 @@
     "dev:job": "wrangler dev --test-scheduled",
     "deploy": "wrangler deploy --minify",
     "typecheck": "tsc --noEmit",
-    "test": "bun test"
+    "test": "bun test",
+    "cf-typegen": "wrangler types"
   },
   "devDependencies": {
     "@types/bun": "latest"

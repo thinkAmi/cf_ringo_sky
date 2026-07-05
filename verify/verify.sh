@@ -53,7 +53,7 @@ echo "==> 検証専用 D1 を初期化（migrations + seed + feeds fixture / 隔
 (
   cd "$DB_DIR"
   bunx wrangler d1 migrations apply ringodb --local --persist-to "$VERIFY_STATE"
-  bunx wrangler d1 execute ringodb --local --persist-to "$VERIFY_STATE" --file=seed/apples_and_genealogies.sql --batch-size=1
+  bunx wrangler d1 execute ringodb --local --persist-to "$VERIFY_STATE" --file=seed/apples_and_genealogies.sql
   bunx wrangler d1 execute ringodb --local --persist-to "$VERIFY_STATE" --file="$VERIFY_DIR/feeds_fixture.sql"
 ) >"$LOG_DIR/ringo-verify-db-setup.log" 2>&1
 

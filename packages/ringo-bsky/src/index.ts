@@ -1,9 +1,6 @@
-// @ts-ignore
-import type { ExportedHandler, WorkerEntrypoint } from 'cloudflare:workers'
-import { BskyAgent } from '@atproto/api'
 import type { AppBskyFeedGetAuthorFeed } from '@atproto/api'
+import { BskyAgent } from '@atproto/api'
 import type { Record } from '@atproto/api/dist/client/types/app/bsky/feed/post'
-import type { KVNamespace } from '@cloudflare/workers-types'
 import {
   filterNewFeeds,
   filterRingoFeeds,
@@ -11,11 +8,16 @@ import {
   matchName,
 } from './feed'
 
+// ringo-db の DatabaseWorkerEntrypoint への service binding のうち、ここで使う RPC メソッド
+type RingoDbWorker = {
+  insertFeeds(ringoFeeds: string): Promise<void>
+}
+
 export interface Env {
   IDENTIFIER: string
   APP_PASSWORD: string
   LAST_SEARCH_KV: KVNamespace
-  RINGO_DB_WORKER: WorkerEntrypoint
+  RINGO_DB_WORKER: RingoDbWorker
 }
 
 const BSKY_KV_KEY = 'bskyFeed'
@@ -51,7 +53,6 @@ class Bsky {
     const ringoFeeds = filterRingoFeeds(newFeeds)
 
     // 後で追跡できるよう、ログに登録したリンゴの投稿を書き込んでおく
-    // biome-ignore lint/suspicious/noConsoleLog: <explanation>
     console.log(ringoFeeds)
 
     // サービスバインディングを使って、DBを更新する
@@ -93,8 +94,8 @@ class Bsky {
 }
 
 export default {
-  async scheduled(_event: any, env: Env) {
+  async scheduled(_event, env) {
     const bsky = new Bsky(env)
     await bsky.run()
   },
-} as ExportedHandler<Env>
+} satisfies ExportedHandler<Env>

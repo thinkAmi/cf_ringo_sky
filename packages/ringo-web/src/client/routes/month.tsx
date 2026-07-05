@@ -1,14 +1,14 @@
 import { createFileRoute } from '@tanstack/react-router'
 import {
   CategoryScale,
+  Chart as chartJs,
   Filler,
   Legend,
-  LineElement,
   LinearScale,
+  LineElement,
   PointElement,
   Title,
   Tooltip,
-  Chart as chartJs,
 } from 'chart.js'
 import { Line } from 'react-chartjs-2'
 import { htmlLegendPlugin } from '../plugins/appleLegendPlugin'
@@ -85,11 +85,7 @@ const ChartComponent = () => {
 }
 
 const Component = () => {
-  return (
-    <>
-      <ChartComponent />
-    </>
-  )
+  return <ChartComponent />
 }
 
 export const Route = createFileRoute('/month')({
