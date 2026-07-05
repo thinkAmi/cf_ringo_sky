@@ -507,6 +507,14 @@ const appleSet: Set<Apple> = new Set([
     name: '遠山三系',
     color: 'FireBrick',
   },
+  {
+    name: 'KORU',
+    color: 'Crimson',
+  },
+  {
+    name: 'Ambrosia',
+    color: 'IndianRed',
+  },
 ])
 
 export const appleColors = [...appleSet]
