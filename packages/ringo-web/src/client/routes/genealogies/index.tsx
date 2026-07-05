@@ -1,28 +1,6 @@
-import { DataGrid, type GridColDef, type GridRowParams } from '@mui/x-data-grid'
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
 import { TitleWithMenu } from '../-components/TitleWithMenu'
 import { fetchGenealogies } from './-api/genealogies'
-
-const columns: GridColDef[] = [
-  {
-    field: 'appleDisplayName',
-    headerName: 'リンゴ名',
-    editable: false,
-    flex: 1,
-  },
-  {
-    field: 'pollenDisplayName',
-    headerName: '花粉親',
-    editable: false,
-    flex: 1,
-  },
-  {
-    field: 'seedDisplayName',
-    headerName: '種子親',
-    editable: false,
-    flex: 1,
-  },
-]
 
 const GenealogiesComponent = () => {
   const navigate = useNavigate()
@@ -33,33 +11,44 @@ const GenealogiesComponent = () => {
     return null
   }
 
-  const applesWithId = data.map((d) => {
-    return {
-      id: d.appleName,
-      ...d,
-    }
-  })
-
-  const handleOnRowClick = (params: GridRowParams) => {
+  const handleRowClick = (appleName: string) => {
     navigate({
       to: '/genealogies/$appleName',
-      params: { appleName: String(params.id) },
+      params: { appleName },
     })
   }
 
   return (
     <>
       <TitleWithMenu title={'系譜図を表示可能なりんご一覧'} />
-      <DataGrid
-        columns={columns}
-        rows={applesWithId}
-        onRowClick={handleOnRowClick}
-        autosizeOptions={{
-          columns: ['appleDisplayName', 'pollenDisplayName', 'seedDisplayName'],
-          includeHeaders: false,
-          includeOutliers: true,
-        }}
-      />
+      <table className={'genealogy-table'}>
+        <thead>
+          <tr>
+            <th>リンゴ名</th>
+            <th>花粉親</th>
+            <th>種子親</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((d) => (
+            <tr
+              key={d.appleName}
+              tabIndex={0}
+              onClick={() => handleRowClick(d.appleName)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  handleRowClick(d.appleName)
+                }
+              }}
+            >
+              <td>{d.appleDisplayName}</td>
+              <td>{d.pollenDisplayName}</td>
+              <td>{d.seedDisplayName}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </>
   )
 }
