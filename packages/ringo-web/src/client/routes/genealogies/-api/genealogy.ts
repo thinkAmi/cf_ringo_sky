@@ -36,8 +36,8 @@ export type Genealogy = {
 
 const client = hc<GenealogyRouteResponseType>('')
 
-// バックエンドは JSON.parse を挟むため hc の戻り値は any になる。
-// 実際の形を明示して loader/useLoaderData に型を通す。
+// バックエンドは JSON.parse を挟むため hc の戻り値は型付かない({})。
+// 実際の形へキャストして loader/useLoaderData に型を通す。
 // 失敗時は throw し、ルーターの errorComponent で表示する。
 export const fetchGenealogyByName = async (
   appleName: string,
@@ -50,5 +50,5 @@ export const fetchGenealogyByName = async (
   if (!response.ok) {
     throw new Error(`系譜の取得に失敗しました (${response.status})`)
   }
-  return await response.json()
+  return (await response.json()) as Genealogy[]
 }

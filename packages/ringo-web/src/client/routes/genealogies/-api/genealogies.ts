@@ -12,13 +12,13 @@ export type Genealogy = {
 
 const client = hc<GenealogiesRouteResponseType>('')
 
-// バックエンドは JSON.parse を挟むため hc の戻り値は any になる。
-// 実際の形を明示して loader/useLoaderData に型を通す。
+// バックエンドは JSON.parse を挟むため hc の戻り値は型付かない({})。
+// 実際の形へキャストして loader/useLoaderData に型を通す。
 // 失敗時は throw し、ルーターの errorComponent で表示する。
 export const fetchGenealogies = async (): Promise<Genealogy[]> => {
   const response = await client.api.genealogies.$get()
   if (!response.ok) {
     throw new Error(`系譜一覧の取得に失敗しました (${response.status})`)
   }
-  return await response.json()
+  return (await response.json()) as Genealogy[]
 }
