@@ -25,5 +25,8 @@
 
     // Cloudflare の型は wrangler types 生成の worker-configuration.d.ts で供給する
     "types": []
-  }
+  },
+  // scripts/ は bun 実行専用の開発スクリプト(bun:sqlite 等)。Worker(CF ランタイム)の
+  // 型環境とは文脈が異なるため、型チェック対象から除外する。
+  "exclude": ["scripts"]
 }
