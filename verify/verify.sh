@@ -61,6 +61,20 @@ echo "==> ringo-db を起動（wrangler dev :8788 / 隔離状態）"
 ( cd "$DB_DIR" && exec bunx wrangler dev --persist-to "$VERIFY_STATE" ) >"$LOG_DIR/ringo-verify-db.log" 2>&1 &
 DB_PID=$!
 
+# ringo-web を先に起動すると getPlatformProxy が ringo-db の dev registry 登録より
+# 先に接続し binding を張れないため、ringo-db が :8788 で応答してから起動する。
+echo "==> ringo-db の起動待ち"
+for _ in $(seq 1 60); do
+  if curl -sf "http://localhost:8788/" >/dev/null 2>&1; then
+    break
+  fi
+  if ! kill -0 "$DB_PID" 2>/dev/null; then
+    echo "ERROR: ringo-db の起動に失敗しました。ログ: $LOG_DIR/ringo-verify-db.log" >&2
+    exit 1
+  fi
+  sleep 1
+done
+
 echo "==> ringo-web を起動（Vite :5173）"
 ( cd "$WEB_DIR" && exec bunx vite ) >"$LOG_DIR/ringo-verify-web.log" 2>&1 &
 WEB_PID=$!

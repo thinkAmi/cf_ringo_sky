@@ -1,15 +1,7 @@
-import { DataGrid, type GridColDef } from '@mui/x-data-grid'
-import { useSuspenseQuery } from '@tanstack/react-query'
+import { DataGrid, type GridColDef, type GridRowParams } from '@mui/x-data-grid'
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
 import { TitleWithMenu } from '../-components/TitleWithMenu'
-import { genealogiesQueryOptions } from './-api/genealogies'
-
-type Genealogy = {
-  appleName: string
-  appleDisplayName: string
-  pollenName: string
-  seedName: string
-}
+import { fetchGenealogies } from './-api/genealogies'
 
 const columns: GridColDef[] = [
   {
@@ -34,19 +26,24 @@ const columns: GridColDef[] = [
 
 const GenealogiesComponent = () => {
   const navigate = useNavigate()
-  const data = useSuspenseQuery(genealogiesQueryOptions).data
+  // loader が成功時のみ値を返す(失敗時は throw して errorComponent 表示)。
+  // useLoaderData の型は T | undefined のため、型を満たすガードを置く。
+  const data = Route.useLoaderData()
+  if (!data) {
+    return null
+  }
 
-  const applesWithId = data.map((d: Genealogy) => {
+  const applesWithId = data.map((d) => {
     return {
       id: d.appleName,
       ...d,
     }
   })
 
-  const handleOnRowClick = (params) => {
+  const handleOnRowClick = (params: GridRowParams) => {
     navigate({
       to: '/genealogies/$appleName',
-      params: { appleName: params.id },
+      params: { appleName: String(params.id) },
     })
   }
 
@@ -77,6 +74,5 @@ const Component = () => {
 
 export const Route = createFileRoute('/genealogies/')({
   component: Component,
-  loader: async ({ context: { queryClient } }) =>
-    await queryClient.ensureQueryData(genealogiesQueryOptions),
+  loader: () => fetchGenealogies(),
 })
