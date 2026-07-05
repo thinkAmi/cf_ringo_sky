@@ -1,6 +1,8 @@
-import type { AppBskyFeedGetAuthorFeed } from '@atproto/api'
-import { BskyAgent } from '@atproto/api'
-import type { Record } from '@atproto/api/dist/client/types/app/bsky/feed/post'
+import {
+  type AppBskyFeedGetAuthorFeed,
+  type AppBskyFeedPost,
+  AtpAgent,
+} from '@atproto/api'
 import {
   filterNewFeeds,
   filterRingoFeeds,
@@ -30,7 +32,7 @@ class Bsky {
   }
 
   async run() {
-    const agent = new BskyAgent({
+    const agent = new AtpAgent({
       service: 'https://bsky.social',
     })
 
@@ -64,7 +66,7 @@ class Bsky {
     await this.env.LAST_SEARCH_KV.put(BSKY_KV_KEY, latestCreateAt)
   }
 
-  async fetchAuthorFeeds(agent: BskyAgent) {
+  async fetchAuthorFeeds(agent: AtpAgent) {
     const params: AppBskyFeedGetAuthorFeed.QueryParams = {
       actor: this.env.IDENTIFIER,
     }
@@ -75,7 +77,7 @@ class Bsky {
 
     const records = feed.map((f) => ({
       cid: f.post.cid,
-      record: f.post.record as Record,
+      record: f.post.record as AppBskyFeedPost.Record,
     }))
 
     const bskyFeeds = records.map(({ cid, record }) => {
