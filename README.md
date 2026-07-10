@@ -181,6 +181,22 @@ bun run verify              # baseline と比較
 - 検証用の D1 状態は `--persist-to` で開発用（`.wrangler/state`）と隔離しているため、実行しても開発用の `feeds` データは変更されません。
 
 　  
+# 開発フロー
+
+設計が必要な変更（新機能、データ構造・API 契約の変更、移行、複数 PR 規模の作業）は、Claude Code のスキルで構成された次のパイプラインで進めます。設計は高性能モデルとの対話で確定し、実装は計画ファイルを介して別セッション（Sonnet など）に引き継ぐ運用です。
+
+```
+/grill-with-docs ──→ write-plan ──→ run-plan-step ⇄ audit-plan-step
+   設計対話            計画ファイル化      PR 単位の実装        独立監査
+   (docs/adr/ と       (docs/YYYY-MM-     (機械ゲート→報告→    (承認前に別セッションで
+    CONTEXT.md に記録)   <topic>-plan.md)    承認→1コミット)      ゲート再実行・照合)
+```
+
+- 各スキルの詳細は `.claude/skills/<name>/SKILL.md` を参照
+- 依存パッケージの更新は専用の `plan-dependency-upgrade` / `run-upgrade-step` を使う
+- 小さな修正・バグ修正・単発の変更はパイプライン不要。迷ったら `/grill-with-docs` から
+
+　  
 # ライセンス
 MIT
 
