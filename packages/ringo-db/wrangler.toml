@@ -12,3 +12,7 @@ port = 8788
 binding = "DB" # i.e. available in your Worker on env.DB
 database_name = "ringodb"
 database_id = "01febb3d-148f-4f3c-8fea-e32445da1ae1"
+
+[[rules]]
+type = "Text"
+globs = ["**/*.md"]

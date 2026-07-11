@@ -23,8 +23,9 @@
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false,
 
-    // Cloudflare の型は wrangler types 生成の worker-configuration.d.ts で供給する
-    "types": []
+    // Cloudflare の型は wrangler types 生成の worker-configuration.d.ts で供給する。
+    // bun:test / bun:sqlite (*.test.ts が使用)のためだけに "bun" を追加する
+    "types": ["bun"]
   },
   // scripts/ は bun 実行専用の開発スクリプト(bun:sqlite 等)。Worker(CF ランタイム)の
   // 型環境とは文脈が異なるため、型チェック対象から除外する。

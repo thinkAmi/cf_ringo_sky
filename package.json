@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "./scripts/dev.sh",
     "typecheck": "bun run --filter='*' typecheck",
-    "test": "bun run --filter=ringo-bsky test",
+    "test": "bun run --filter='*' test",
     "verify": "./verify/verify.sh",
     "cf-typegen": "bun run --filter='*' cf-typegen",
     "postinstall": "bun run --filter='*' cf-typegen"
