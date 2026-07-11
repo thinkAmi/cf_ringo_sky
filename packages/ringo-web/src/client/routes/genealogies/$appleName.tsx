@@ -1,7 +1,15 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { Link, createFileRoute, notFound } from '@tanstack/react-router'
 import { TitleWithMenu } from '../-components/TitleWithMenu'
 import { fetchGenealogyByName } from './-api/genealogy'
 import { AppleNameCard } from './-components/AppleNameCard'
+
+const GenealogyNotFoundComponent = () => (
+  <>
+    <TitleWithMenu title={'りんごの系譜図'} />
+    <p>この品種は登録されていません。</p>
+    <Link to={'/genealogies'}>系譜一覧に戻る</Link>
+  </>
+)
 
 const GenealogyChartComponent = () => {
   // loader が成功時のみ値を返す(失敗時は throw して errorComponent 表示)。
@@ -117,5 +125,12 @@ const Component = () => {
 
 export const Route = createFileRoute('/genealogies/$appleName')({
   component: Component,
-  loader: ({ params: { appleName } }) => fetchGenealogyByName(appleName),
+  notFoundComponent: GenealogyNotFoundComponent,
+  loader: async ({ params: { appleName } }) => {
+    const genealogies = await fetchGenealogyByName(appleName)
+    if (genealogies.length === 0) {
+      throw notFound()
+    }
+    return genealogies
+  },
 })
