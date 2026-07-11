@@ -42,6 +42,7 @@
 | 国光 | こっこう | FireBrick | kokkou | unknown | unknown | |
 | KORU | こる | Crimson |  |  |  | |
 | ゴールデンデリシャス | ごーるでんでりしゃす | DarkOrange | golden_delicious | unknown | unknown | |
+| ゴールドロマン | ごーるどろまん | Yellow | gold_roman | tsugaru | shinano_gold | [品種登録データベース 登録番号20601](https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=20601&LANGUAGE=Japanese) |
 | 彩香 | さいか | FireBrick |  |  |  | |
 | さとあかり | さとあかり | LightSalmon |  |  |  | |
 | サマーチャンス | さまーちゃんす | BlanchedAlmond |  |  |  | |
