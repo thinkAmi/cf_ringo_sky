@@ -17,6 +17,7 @@
 ## 進め方の原則
 
 - **1 PR = 1フェーズ**(PR 1: 導入本体 / PR 2: スキル再編 / PR 3: D1 撤去とドキュメント)。PR 間に順序依存があり、入れ替え不可
+- **各 PR の実行は run-plan-step スキル、コミット承認前の独立監査は audit-plan-step スキルを使う**
 - **各 PR は機械ゲート通過が条件**: typecheck → biome check → build(`wrangler deploy --dry-run` / ringo-web build)→ `bun test` → verify.sh の API スナップショット diff ゼロ
 - 品種マスタの初期データは**手書き転記ではなく変換スクリプトで機械的に生成する**(appleColors.ts と seed SQL が入力)。手書き転記はハルシネーションの入り口なので禁止。例外は「読み」列のみ(AI が記入し、人間が完了報告でレビュー)
 - wrangler は devDependency のバージョンに固定して `bunx wrangler` で実行(CLAUDE.md の既存ルール)
