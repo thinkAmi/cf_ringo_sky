@@ -7,9 +7,10 @@ set -euo pipefail
 #   ./verify/verify.sh            # baseline と比較（差分があれば exit 1）
 #   ./verify/verify.sh --update   # baseline を再生成
 #
-# ローカル D1 に seed + 決定的な feeds（feeds_fixture.sql）を投入し、
+# ローカル D1 に決定的な feeds（feeds_fixture.sql）を投入し、
 # ringo-db（:8788）と ringo-web（Vite :5173）を起動して 4 エンドポイントを
 # curl、jq でキーソート正規化して baseline と突き合わせる。
+# 系譜・色は品種マスタ(varieties.md)が source of truth のため D1 への投入は不要。
 # 依存する service binding のため、両サーバの起動が前提となる。
 #
 # 重要: D1 の状態は開発用（既定の .wrangler/state）とは別の専用ディレクトリ
@@ -49,11 +50,10 @@ trap cleanup EXIT
 
 mkdir -p "$BASELINE_DIR"
 
-echo "==> 検証専用 D1 を初期化（migrations + seed + feeds fixture / 隔離状態）"
+echo "==> 検証専用 D1 を初期化（migrations + feeds fixture / 隔離状態）"
 (
   cd "$DB_DIR"
   bunx wrangler d1 migrations apply ringodb --local --persist-to "$VERIFY_STATE"
-  bunx wrangler d1 execute ringodb --local --persist-to "$VERIFY_STATE" --file=seed/apples_and_genealogies.sql
   bunx wrangler d1 execute ringodb --local --persist-to "$VERIFY_STATE" --file="$VERIFY_DIR/feeds_fixture.sql"
 ) >"$LOG_DIR/ringo-verify-db-setup.log" 2>&1
 
