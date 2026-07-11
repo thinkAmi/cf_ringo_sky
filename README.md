@@ -63,7 +63,6 @@ D1 のバインディングは `packages/ringo-db/wrangler.toml` に定義され
 ```
 cd packages/ringo-db
 bunx wrangler d1 migrations apply ringodb --local
-bunx wrangler d1 execute ringodb --local --file=seed/apples_and_genealogies.sql
 ```
 
 　  
@@ -89,7 +88,12 @@ bun run dev
 | http://localhost:5173/api/month | 月別集計API |
 | http://localhost:5173/api/genealogies | 系譜図一覧API |
 
-seed で投入されるのは `apples` / `genealogies` テーブルのみで、初期状態では `feeds` テーブルが空です。そのため `/api/total` と `/api/month` が `[]` を返し、集計グラフが表示されませんが、これは異常ではありません。グラフを確認するには、次の「feedsデータの投入」を行います。
+系譜・色は品種マスタ（`packages/ringo-db/data/varieties.md`）が source of truth のため、D1 への初期データ投入は不要です。一方、初期状態では `feeds` テーブルが空のため `/api/total` と `/api/month` が `[]` を返し、集計グラフが表示されませんが、これは異常ではありません。グラフを確認するには、次の「feedsデータの投入」を行います。
+
+　  
+## 品種の追加
+
+りんご品種の追加・更新は `register-apple-variety` スキル、または `packages/ringo-db/data/varieties.md` を直接編集して `bun test` を通し、デプロイすることで行います。D1 への seed 投入は不要です。
 
 　  
 ## feedsデータの投入
@@ -226,22 +230,6 @@ bunx wrangler d1 migrations apply ringodb --local
 
 ```
 bunx wrangler d1 migrations apply ringodb --remote
-```
-
-　  
-
-### 初期データ(seed)の投入
-
-ローカルの場合
-
-```
-bunx wrangler d1 execute ringodb --local --file=seed/apples_and_genealogies.sql
-```
-
-本番環境の場合
-
-```
-bunx wrangler d1 execute ringodb --remote --file=seed/apples_and_genealogies.sql
 ```
 
 　  
