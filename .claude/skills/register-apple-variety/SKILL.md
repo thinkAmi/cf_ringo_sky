@@ -5,7 +5,8 @@ description: >-
   色のみ・系譜のみ・両方、どの組み合わせもこの1スキルが扱う。
   「品種を追加」「りんごを登録して」「新しい品種をグラフに出したい」「系譜を登録」等で発動する。
   編集 → `bun test` → 完了報告 → ユーザー確認 → 1コミットで完結するローカル作業。
-  パーサ・バリデータ(varietyMaster.ts)のコード変更は対象外。push・PR 作成・デプロイは人間の担当。
+  パーサ・バリデータ(varietyMaster.ts)のコード変更は対象外。push・PR 作成は人間の担当。
+  本番反映は main へのマージで自動デプロイ(Workers Builds)。
 ---
 
 # register-apple-variety
@@ -23,7 +24,7 @@ description: >-
 **やらないこと(実行しない)**
 - パーサ・バリデータ(`packages/ringo-db/src/varietyMaster.ts`)やテストのコード編集。
   lint ルール自体が間違っていると思ったら、回避せず報告して止まる
-- push・PR 作成・マージ・デプロイ → **すべて人間が行う**
+- push・PR 作成・マージ → **人間が行う**（本番反映は main マージ後に Workers Builds が自動デプロイ）
 - 架空の品種・出典のでっち上げ。入力はユーザーから得る
 
 ## 前提となるドメイン知識
@@ -41,7 +42,8 @@ description: >-
   英字品種もひらがな転写で書く(例: KORU → こる)
 - **出典は行の内容全般(系譜・色・読み)の根拠。** 自由記述(Web は markdown リンク、
   書籍は書名等)、空も可。画面・API には出ない保持専用データ
-- 本番反映は ringo-db Worker のデプロイ(人間の担当)。このスキルはコミットまで
+- 本番反映は main へのマージで自動(Workers Builds が ringo-db をビルド・デプロイし、
+  `bun test` と typecheck を通らない変更はデプロイされない)。このスキルはコミットまで
 
 ## 手順
 
@@ -114,4 +116,4 @@ bun test
 
 - lint ルールの詳細(varietyMaster.ts とそのテストが正。エラーメッセージが案内する)
 - コミット規約の詳細(commit スキルと CLAUDE.md の領分)
-- デプロイ手順(人間の作業。README の領分)
+- デプロイの仕組み・設定値(Workers Builds。README「デプロイに関する情報」の領分)

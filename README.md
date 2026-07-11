@@ -93,7 +93,7 @@ bun run dev
 　  
 ## 品種の追加
 
-りんご品種の追加・更新は `register-apple-variety` スキル、または `packages/ringo-db/data/varieties.md` を直接編集して `bun test` を通し、デプロイすることで行います。D1 への seed 投入は不要です。
+りんご品種の追加・更新は `register-apple-variety` スキル、または `packages/ringo-db/data/varieties.md` を直接編集して `bun test` を通すことで行います。D1 への seed 投入は不要です。本番への反映は main ブランチへのマージで自動デプロイされます（「デプロイに関する情報」参照）。
 
 　  
 ## feedsデータの投入
@@ -234,6 +234,26 @@ bunx wrangler d1 migrations apply ringodb --remote
 
 　  
 ### デプロイ
+
+main ブランチへのマージで、Workers Builds により自動デプロイされます。
+main 以外のブランチへの push では `wrangler versions upload`（本番昇格なしのバージョンアップロード）が実行されます。
+watch paths に一致しない変更（`ringo-web` / `ringo-bsky` のみの変更など）ではビルド自体がスキップされます。
+
+Workers Builds の設定（Cloudflare ダッシュボード > Workers & Pages > ringo-db > Settings > Build）:
+
+| 項目 | 設定値 |
+|---|---|
+| 本番ブランチ | `main` |
+| Root directory | （空 = リポジトリルート） |
+| Build command | `bun install && cd packages/ringo-db && bun run test && bun run typecheck` |
+| Deploy command | `cd packages/ringo-db && bun run deploy` |
+| Non-production branch deploy command | `cd packages/ringo-db && bunx wrangler versions upload` |
+| Build watch paths (include) | `packages/ringo-db/*`, `package.json`, `bun.lock` |
+| Build variables | `BUN_VERSION=1.3.14` |
+
+Build command が `bun test`（varieties.md のバリデーション含む）と `typecheck` を通すため、これらに失敗する変更は本番へデプロイされません。
+
+緊急時など、手動でデプロイする場合（フォールバック）:
 
 ```
 bun run deploy
