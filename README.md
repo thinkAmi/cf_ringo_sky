@@ -253,6 +253,12 @@ Workers Builds の設定（Cloudflare ダッシュボード > Workers & Pages > 
 
 Build command が `bun test`（varieties.md のバリデーション含む）と `typecheck` を通すため、これらに失敗する変更は本番へデプロイされません。
 
+運用メモ:
+
+- 手元の Bun をアップグレードしたら、ダッシュボードの `BUN_VERSION` と上の表も追随して更新します
+- main へのマージが本番反映に直結するため、GitHub Ruleset `protect-main`（PR 必須・force push 禁止）で main への直 push を禁止しています。緊急時は GitHub の Settings > Rules > Rulesets で Enforcement を一時的に Disabled にできます
+- 採用の経緯（GitHub Actions 方式との比較）は `docs/adr/0004-workers-builds-auto-deploy.md` を参照
+
 緊急時など、手動でデプロイする場合（フォールバック）:
 
 ```
