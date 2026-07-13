@@ -12,6 +12,8 @@ description: >-
 依存更新の計画書を8フェーズで作成する。成果物は `docs/YYYY-MM-dependency-upgrade-plan.md` 1本。
 過去の実施例: `docs/2026-07-dependency-upgrade-plan.md`（PR #7 で完遂）。
 
+**定常レーンとの境界（ADR 0006）**: minor/patch の定期更新は Dependabot の週次 PR が担うため、このスキルの対象外。このスキルが扱うのは major 更新・依存の撤去/再導入・方針変更を伴う更新。Dependabot が作った major の個別 PR はマージせず、このスキルの計画の入力として使う（計画完了時に当該 PR は自動クローズされる）。
+
 ## 過去の計画 doc の扱い（最初に読む）
 
 - 直近の計画 doc からは **①不採用・先送り表 ②ポリシー例外記録 の2節だけ**を読む。他の節は参照しない
