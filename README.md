@@ -266,6 +266,14 @@ bun run deploy
 ```
 
 　  
+### CI（GitHub Actions）
+
+- CI はテスト専用（シークレットなし）で、全 PR と main push で実行されます。デプロイは従来どおり Workers Builds です（[ADR 0005](docs/adr/0005-test-ci-on-github-actions.md)）
+- ワークフローが使う action は full-length SHA でピン留めします。タグ → SHA の変換ワンライナー: `gh api repos/<owner>/<repo>/commits/<tag> --jq .sha`（例: `gh api repos/actions/checkout/commits/v4 --jq .sha`）。追随は Dependabot が行います
+- Bun のバージョンは `.bun-version` が単一ソースです。更新時は Workers Builds ダッシュボードの `BUN_VERSION` とこの README の表も追随させます
+- ringo-web / ringo-bsky はマージ後の即時デプロイ義務はありません。目安として四半期に一度程度はデプロイして差分を小さく保ちます
+
+　  
 ## ringo-web ディレクトリ
 
 Cloudflare Pages `ringo-web` のデプロイ関連の作業です。
