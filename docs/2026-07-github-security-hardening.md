@@ -45,10 +45,13 @@ GitHub API で実測(2026-07-13時点、`gh api repos/thinkAmi/cf_ringo_sky --jq
 
 - **Tag Rulesets・Release immutability**: タグ・リリースを運用していないため該当なし
 - **コミット署名の強化(SSH鍵)**: アプリケーションコード側の変更ではないが運用習慣の変更を伴うため、今回のスコープ(GitHub 設定)からは除外。別セッションで検討
+- **Secret scanning の任意オプション(non-provider patterns / validity checks)**: 誤検知増とのトレードオフを考慮し、意識的に見送り(見落としではない)。必要になったら再検討
 
 ## その後の決定（2026-07-13）
 
 テスト専用 CI（[ADR 0005](adr/0005-test-ci-on-github-actions.md)）の導入により、上記「対象外と判断した項目」から除いた Actions 関連2項目（SHA 固定強制・外部コントリビューター承認）は該当ありに転じ、ADR 0005 の3設定セットとして有効化する: "Require actions to be pinned to a full-length commit SHA" / fork PR "Require approval for all external contributors" / Workflow permissions を read-only に。あわせて [ADR 0006](adr/0006-two-lane-dependency-updates.md) で依存更新の二層レーン運用を決定した。
+
+追加(2026-07-14): `allowed_actions: selected` を有効化した(GitHub 製 action + `oven-sh/setup-bun@*` のみ許可、verified creators の一括許可は off)。SHA 固定強制が「参照先のすり替え」を防ぐのに対し、こちらは「未承認 action の持ち込み」自体を実行時に拒否する補完関係にある。AI がワークフローに action を追加するケースも実行前に止まる。同日、Ruleset `protect-main` に required status check `gate` と "Require code scanning results"(CodeQL) も追加済み。
 
 ## 実行手順
 
