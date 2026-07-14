@@ -28,6 +28,8 @@ Dependabot PR の週次レビューを定型化する。前提は [ADR 0006](../
 
 - **CI `gate`**(required check)と **Workers Builds** のチェックが green か
   (`gh pr checks <番号>` で確認。ルート `bun.lock` は Workers Builds の watch paths 内)
+- **`gate` チェック自体が PR に付いていない場合**: required check の導入前に作られた PR で、
+  そのままではマージ不能。人間に「PR へ `@dependabot rebase` とコメントして再作成させる」よう依頼する
 - red の場合はログを読み、原因が「更新そのものによる破壊」か「無関係なフレーク」かを切り分けて報告する。
   いずれでもマージ推奨は出さない
 

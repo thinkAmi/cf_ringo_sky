@@ -270,6 +270,7 @@ bun run deploy
 
 - CI はテスト専用（シークレットなし）で、全 PR と main push で実行されます。デプロイは従来どおり Workers Builds です（[ADR 0005](docs/adr/0005-test-ci-on-github-actions.md)）
 - ワークフローが使う action は full-length SHA でピン留めします。タグ → SHA の変換ワンライナー: `gh api repos/<owner>/<repo>/commits/<tag> --jq .sha`（例: `gh api repos/actions/checkout/commits/v4 --jq .sha`）。追随は Dependabot が行います
+- 実行できる action は許可リスト制です（`allowed_actions: selected`。GitHub 製 + `oven-sh/setup-bun@*` のみ）。**新しい action を使うときは、ワークフローへの追記に加えて Settings > Actions > General の許可リストへの追加が必要**です。`gate` が起動直後に実行拒否で赤くなったら、まず SHA ピン留め漏れかこの許可リスト漏れを疑ってください
 - Bun のバージョンは `.bun-version` が単一ソースです。更新時は Workers Builds ダッシュボードの `BUN_VERSION` とこの README の表も追随させます
 - ringo-web / ringo-bsky はマージ後の即時デプロイ義務はありません。目安として四半期に一度程度はデプロイして差分を小さく保ちます
 
