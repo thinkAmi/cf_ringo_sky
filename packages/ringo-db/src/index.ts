@@ -3,8 +3,8 @@ import { desc, sql } from 'drizzle-orm'
 import { drizzle } from 'drizzle-orm/d1'
 import { feeds } from '../db/schema/feeds'
 import {
+  buildMonthlyDatasets,
   filterRegisteredRows,
-  findColorName,
   findColorNameOrUndefined,
   findGenealogies as findGenealogiesFromMaster,
   findGenealogyByName as findGenealogyByNameFromMaster,
@@ -96,46 +96,9 @@ export class DatabaseWorkerEntrypoint extends WorkerEntrypoint<Env> {
     // 品種マスタに登録のない名前は集計に出さない(ADR 0008)
     const total = filterRegisteredRows(rows)
 
-    // 対象が0件のときは以降のループが空の dataset を1件作ってしまうため、ここで返す
-    if (total.length === 0) {
-      return JSON.stringify({ labels: MONTH_LABELS, datasets: [] })
-    }
-
-    const datasets = []
-    const defaultAttributes = {
-      tension: 0.1,
-    }
-    let name = total[0]?.name as string
-    let quantities = new Array(12).fill(0)
-
-    for (const t of total) {
-      if (name !== t.name) {
-        datasets.push({
-          label: name,
-          data: quantities,
-          borderColor: findColorName(name),
-          backgroundColor: findColorName(name),
-          ...defaultAttributes,
-        })
-
-        name = t.name as string
-        quantities = new Array(12).fill(0)
-      }
-
-      quantities[t.month - 1] = t.total
-    }
-
-    datasets.push({
-      label: name,
-      data: quantities,
-      borderColor: findColorName(name),
-      backgroundColor: findColorName(name),
-      ...defaultAttributes,
-    })
-
     const r = {
       labels: MONTH_LABELS,
-      datasets: datasets,
+      datasets: buildMonthlyDatasets(total),
     }
 
     return JSON.stringify(r)
