@@ -10,7 +10,7 @@
 | アルプス乙女 | あるぷすおとめ | LightSalmon |  |  |  | |
 | Ambrosia | あんぶろしあ | IndianRed |  |  |  | |
 | 祝 | いわい | SpringGreen |  |  |  | |
-| 印度 | いんど | Red | indo | unknown | unknown | |
+| 印度 | いんど | Red | indo | unknown | unknown | [りんごの品種 弘前市りんご公園](https://www.city.hirosaki.aomori.jp/ringopark/hinshu.html) / 青森県のりんご 改訂版 p41 / 偶発実生 |
 | エグレモント・ラセット | えぐれもんとらせっと | Tan |  |  |  | |
 | 遠山三系 | えんざんさんけい | FireBrick |  |  |  | |
 | envy | えんびー | Tomato |  |  |  | |
@@ -33,14 +33,14 @@
 | 紅の夢 | くれないのゆめ | FireBrick | kurenainoyume | unknown | kougyoku | [紅の夢 弘前大学公式](https://nature.hirosaki-u.ac.jp/kurenainoyume/history.html) |
 | グラニースミス | ぐらにーすみす | Green |  |  |  | |
 | 恋空 | こいぞら | Rosybrown |  |  |  | |
-| 紅玉 | こうぎょく | Maroon | kougyoku | unknown | unknown | |
+| 紅玉 | こうぎょく | Maroon | kougyoku | unknown | unknown | 青森県のりんご 改訂版 p90 |
 | こうたろう | こうたろう | LightSalmon |  |  |  | |
 | 高徳 | こうとく | AntiqueWhite | koutoku | unknown | toukou | [高徳 旬の果物百科](https://foodslink.jp/syokuzaihyakka/syun/fruit/apple-Koutoku.htm) |
 | 昂林 | こうりん | MistyRose | kourin | delicious | kokkou | [昂林 りんご大学](https://www.ringodaigaku.com/main/hinshu/ko/kourin.html) / フジの枝変わり |
 | 紅露 | こうろ | FloralWhite |  |  |  | |
-| 国光 | こっこう | FireBrick | kokkou | unknown | unknown | |
+| 国光 | こっこう | FireBrick | kokkou | unknown | unknown | [りんごの品種 弘前市りんご公園](https://www.city.hirosaki.aomori.jp/ringopark/hinshu.html) / 青森県のりんご 改訂版 p109 / 偶発実生 |
 | KORU | こる | Crimson |  |  |  | |
-| ゴールデンデリシャス | ごーるでんでりしゃす | DarkOrange | golden_delicious | unknown | unknown | |
+| ゴールデンデリシャス | ごーるでんでりしゃす | DarkOrange | golden_delicious | unknown | unknown | 青森県のりんご 改訂版 p102 |
 | ゴールドロマン | ごーるどろまん | Yellow | gold_roman | tsugaru | shinano_gold | [品種登録データベース 登録番号20601](https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=20601&LANGUAGE=Japanese) / [ゴールドロマン(高野3号) 紅果園 ロマンシリーズ(PDF)](https://kokaen.jp/pdf/romanseries.pdf) |
 | 彩香 | さいか | FireBrick |  |  |  | |
 | さとあかり | さとあかり | LightSalmon |  |  |  | |
@@ -49,15 +49,15 @@
 | さんさ | さんさ | LightSalmon |  |  |  | |
 | しおりルビー | しおりるびー | FireBrick |  |  |  | |
 | 信濃あかり | しなのあかり | Crimson |  |  |  | |
-| シナノゴールド | しなのごーるど | Gold | shinano_gold | senshu | golden_delicious | |
-| シナノスイート | しなのすいーと | LightCoral | shinano_sweet | tsugaru | fuji | |
-| シナノドルチェ | しなのどるちぇ | AntiqueWhite | shinano_dolce | tsugaru | fuji | |
+| シナノゴールド | しなのごーるど | Gold | shinano_gold | senshu | golden_delicious | [りんごの品種育成 長野県果樹試験場](https://www.pref.nagano.lg.jp/kajushiken/jisseki/joho/ringo.html) |
+| シナノスイート | しなのすいーと | LightCoral | shinano_sweet | tsugaru | fuji | [りんごの品種育成 長野県果樹試験場](https://www.pref.nagano.lg.jp/kajushiken/jisseki/joho/ringo.html) |
+| シナノドルチェ | しなのどるちぇ | AntiqueWhite | shinano_dolce | senshu | golden_delicious | [りんごの品種育成 長野県果樹試験場](https://www.pref.nagano.lg.jp/kajushiken/jisseki/joho/ringo.html) |
 | しなの姫 | しなのひめ | Crimson |  |  |  | |
 | シナノピッコロ | しなのぴっころ | LightSalmon |  |  |  | |
 | シナノプッチ | しなのぷっち | OldLace |  |  |  | |
 | シナノホッペ | しなのほっぺ | FireBrick |  |  |  | |
-| シナノリップ | しなのりっぷ | FireBrick | shinano_lip | shinano_red | senshu | |
-| シナノレッド | しなのれっど | LightSalmon | shinano_red | vista_bella | tsugaru | |
+| シナノリップ | しなのりっぷ | FireBrick | shinano_lip | shinano_red | senshu | [りんごの品種育成 長野県果樹試験場](https://www.pref.nagano.lg.jp/kajushiken/jisseki/joho/ringo.html) |
+| シナノレッド | しなのれっど | LightSalmon | shinano_red | vista_bella | tsugaru | [りんごの品種育成 長野県果樹試験場](https://www.pref.nagano.lg.jp/kajushiken/jisseki/joho/ringo.html) |
 | 秋陽 | しゅうよう | Crimson | shuuyou | senshu | youkou | 青森県のりんご 改訂版 p130 |
 | 真紅 | しんく | FireBrick |  |  |  | |
 | 新生 | しんせい | DarkSalmon |  |  |  | |
@@ -72,15 +72,15 @@
 | 清明 | せいめい | LightSalmon | seimei | fuji | golden_delicious | [清明 りんご大学](https://www.ringodaigaku.com/main/hinshu/se/seimei.html) |
 | 青林 | せいりん | PaleGoldenrod |  |  |  | |
 | 世界一 | せかいいち | LightSalmon | sekaiichi | golden_delicious | delicious | [世界一 果物ナビ](https://www.kudamononavi.com/zukan/apple/sekaiichi) |
-| 千秋 | せんしゅう | LightSalmon | senshu | fuji | toukou | |
+| 千秋 | せんしゅう | LightSalmon | senshu | fuji | toukou | [リンゴ'千秋'の裂果に関する研究 第1報 秋田県果樹試験場研究報告(PDF)](https://www.pref.akita.lg.jp/uploads/public/archive_0000001053_00/%E3%83%AA%E3%83%B3%E3%82%B4%E2%80%99%E5%8D%83%E7%A7%8B%E2%80%99%E3%81%AE%E8%A3%82%E6%9E%9C%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E7%A0%94%E7%A9%B6.pdf) |
 | 大紅栄 | だいこうえい | FireBrick | daikouei | unknown | miki_life | [大紅栄 りんご大学](https://www.ringodaigaku.com/main/hinshu/ta/daikouei.html) |
 | ちなつ | ちなつ | Papayawhip |  |  |  | |
 | 千雪 | ちゆき | MediumVioletred |  |  |  | |
 | 超さん太 | ちょうさんた | FireBrick |  |  |  | |
 | cheekie | ちーきー | MediumVioletred |  |  |  | |
-| つがる | つがる | Brown | tsugaru | kougyoku | golden_delicious | |
-| デリシャス | でりしゃす | LightSalmon | delicious | unknown | unknown | |
-| 東光 | とうこう | Red | toukou | indo | golden_delicious | |
+| つがる | つがる | Brown | tsugaru | kougyoku | golden_delicious | [りんごの品種 弘前市りんご公園](https://www.city.hirosaki.aomori.jp/ringopark/hinshu.html) |
+| デリシャス | でりしゃす | LightSalmon | delicious | unknown | unknown | [りんごの品種 弘前市りんご公園](https://www.city.hirosaki.aomori.jp/ringopark/hinshu.html) / 青森県のりんご 改訂版 p169 / 偶発実生 |
+| 東光 | とうこう | Red | toukou | indo | golden_delicious | [りんごの品種 弘前市りんご公園](https://www.city.hirosaki.aomori.jp/ringopark/hinshu.html) |
 | トキ | とき | Yellow |  |  |  | |
 | となみ | となみ | Brown |  |  |  | |
 | 夏あかり | なつあかり | MistyRose |  |  |  | |
@@ -89,10 +89,10 @@
 | ハックナイン | はっくないん | LightSalmon | hac9 | tsugaru | fuji | [りんご大学 ハックナイン](https://www.ringodaigaku.com/main/hinshu/ha/hakkunain.html) |
 | はるか | はるか | LightYellow | haruka | starking | golden_delicious | [りんご大学 はるか](https://www.ringodaigaku.com/main/hinshu/ha/haruka.html) |
 | ひめかみ | ひめかみ | IndianRed | himekami | kougyoku | fuji | [育成品種紹介 ひめかみ 農研機構](https://www.naro.go.jp/laboratory/nifts/kih/apple_cat/post_8.html) |
-| ビスタベラ | びすたべら | Red | vista_bella | unknown | unknown | |
+| ビスタベラ | びすたべら | Red | vista_bella | unknown | unknown | 青森県のりんご 改訂版 p200 |
 | ピンクレディ | ぴんくれでぃ | Pink |  |  |  | |
 | ファーストレディ | ふぁーすとれでぃ | MistyRose |  |  |  | |
-| フジ | ふじ | Red | fuji | delicious | kokkou | |
+| フジ | ふじ | Red | fuji | delicious | kokkou | [りんごの王様「ふじ」の誕生 秋田県(PDF)](https://www.pref.akita.lg.jp/uploads/public/archive_0000051281_00/%E3%82%8A%E3%82%93%E3%81%94%E3%81%AE%E7%8E%8B%E6%A7%98%E3%80%8C%E3%81%B5%E3%81%98%E3%80%8D%E3%81%AE%E8%AA%95%E7%94%9F.pdf) |
 | ブラムリー | ぶらむりー | Lime |  |  |  | |
 | Breeze | ぶりーず | Brown |  |  |  | |
 | ブレンハイム・オレンジ | ぶれんはいむおれんじ | DarkSeaGreen |  |  |  | |
