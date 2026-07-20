@@ -1,5 +1,69 @@
 [
   {
+    "appleDisplayName": "あいかの香り",
+    "appleName": "aikanokaori",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "フジ",
+    "seedName": "fuji"
+  },
+  {
+    "appleDisplayName": "あかぎ",
+    "appleName": "akagi",
+    "pollenDisplayName": "紅玉",
+    "pollenName": "kougyoku",
+    "seedDisplayName": "ゴールデンデリシャス",
+    "seedName": "golden_delicious"
+  },
+  {
+    "appleDisplayName": "秋茜",
+    "appleName": "akiakane",
+    "pollenDisplayName": "フジ",
+    "pollenName": "fuji",
+    "seedDisplayName": "ゴールデンデリシャス",
+    "seedName": "golden_delicious"
+  },
+  {
+    "appleDisplayName": "秋映",
+    "appleName": "akibae",
+    "pollenDisplayName": "つがる",
+    "pollenName": "tsugaru",
+    "seedDisplayName": "千秋",
+    "seedName": "senshu"
+  },
+  {
+    "appleDisplayName": "秋田ゴールド",
+    "appleName": "akita_gold",
+    "pollenDisplayName": "フジ",
+    "pollenName": "fuji",
+    "seedDisplayName": "ゴールデンデリシャス",
+    "seedName": "golden_delicious"
+  },
+  {
+    "appleDisplayName": "紅将軍",
+    "appleName": "benishougun",
+    "pollenDisplayName": "デリシャス",
+    "pollenName": "delicious",
+    "seedDisplayName": "国光",
+    "seedName": "kokkou"
+  },
+  {
+    "appleDisplayName": "キュート",
+    "appleName": "cute",
+    "pollenDisplayName": "つがる",
+    "pollenName": "tsugaru",
+    "seedDisplayName": "千秋",
+    "seedName": "senshu"
+  },
+  {
+    "appleDisplayName": "大紅栄",
+    "appleName": "daikouei",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "未希ライフ",
+    "seedName": "miki_life"
+  },
+  {
     "appleDisplayName": "デリシャス",
     "appleName": "delicious",
     "pollenDisplayName": "不明",
@@ -32,12 +96,108 @@
     "seedName": "unknown"
   },
   {
+    "appleDisplayName": "ハックナイン",
+    "appleName": "hac9",
+    "pollenDisplayName": "つがる",
+    "pollenName": "tsugaru",
+    "seedDisplayName": "フジ",
+    "seedName": "fuji"
+  },
+  {
+    "appleDisplayName": "はるか",
+    "appleName": "haruka",
+    "pollenDisplayName": "スターキング",
+    "pollenName": "starking",
+    "seedDisplayName": "ゴールデンデリシャス",
+    "seedName": "golden_delicious"
+  },
+  {
+    "appleDisplayName": "ひめかみ",
+    "appleName": "himekami",
+    "pollenDisplayName": "紅玉",
+    "pollenName": "kougyoku",
+    "seedDisplayName": "フジ",
+    "seedName": "fuji"
+  },
+  {
+    "appleDisplayName": "北斗",
+    "appleName": "hokuto",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "フジ",
+    "seedName": "fuji"
+  },
+  {
+    "appleDisplayName": "ほのか",
+    "appleName": "honoka",
+    "pollenDisplayName": "デリシャス",
+    "pollenName": "delicious",
+    "seedDisplayName": "国光",
+    "seedName": "kokkou"
+  },
+  {
+    "appleDisplayName": "ほおずり",
+    "appleName": "hoozuri",
+    "pollenDisplayName": "紅玉",
+    "pollenName": "kougyoku",
+    "seedDisplayName": "フジ",
+    "seedName": "fuji"
+  },
+  {
     "appleDisplayName": "印度",
     "appleName": "indo",
     "pollenDisplayName": "不明",
     "pollenName": "unknown",
     "seedDisplayName": "不明",
     "seedName": "unknown"
+  },
+  {
+    "appleDisplayName": "ジョナゴールド",
+    "appleName": "jonagold",
+    "pollenDisplayName": "紅玉",
+    "pollenName": "kougyoku",
+    "seedDisplayName": "ゴールデンデリシャス",
+    "seedName": "golden_delicious"
+  },
+  {
+    "appleDisplayName": "ジュライレッド",
+    "appleName": "julyred",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "不明",
+    "seedName": "unknown"
+  },
+  {
+    "appleDisplayName": "ジャンボ王林",
+    "appleName": "jumbo_ourin",
+    "pollenDisplayName": "印度",
+    "pollenName": "indo",
+    "seedDisplayName": "ゴールデンデリシャス",
+    "seedName": "golden_delicious"
+  },
+  {
+    "appleDisplayName": "華宝",
+    "appleName": "kahou",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "シナノスイート",
+    "seedName": "shinano_sweet"
+  },
+  {
+    "appleDisplayName": "金星",
+    "appleName": "kinsei",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "ゴールデンデリシャス",
+    "seedName": "golden_delicious"
+  },
+  {
+    "appleDisplayName": "きおう",
+    "appleName": "kiou",
+    "pollenDisplayName": "千秋",
+    "pollenName": "senshu",
+    "seedDisplayName": "王林",
+    "seedName": "ourin"
   },
   {
     "appleDisplayName": "国光",
@@ -56,12 +216,148 @@
     "seedName": "unknown"
   },
   {
+    "appleDisplayName": "昂林",
+    "appleName": "kourin",
+    "pollenDisplayName": "デリシャス",
+    "pollenName": "delicious",
+    "seedDisplayName": "国光",
+    "seedName": "kokkou"
+  },
+  {
+    "appleDisplayName": "高徳",
+    "appleName": "koutoku",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "東光",
+    "seedName": "toukou"
+  },
+  {
+    "appleDisplayName": "紅の夢",
+    "appleName": "kurenainoyume",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "紅玉",
+    "seedName": "kougyoku"
+  },
+  {
+    "appleDisplayName": "名月",
+    "appleName": "meigetsu",
+    "pollenDisplayName": "フジ",
+    "pollenName": "fuji",
+    "seedDisplayName": "あかぎ",
+    "seedName": "akagi"
+  },
+  {
+    "appleDisplayName": "未希ライフ",
+    "appleName": "miki_life",
+    "pollenDisplayName": "つがる",
+    "pollenName": "tsugaru",
+    "seedDisplayName": "千秋",
+    "seedName": "senshu"
+  },
+  {
+    "appleDisplayName": "美丘",
+    "appleName": "mioka",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "フジ",
+    "seedName": "fuji"
+  },
+  {
+    "appleDisplayName": "未来ふじ",
+    "appleName": "mirai_fuji",
+    "pollenDisplayName": "デリシャス",
+    "pollenName": "delicious",
+    "seedDisplayName": "国光",
+    "seedName": "kokkou"
+  },
+  {
+    "appleDisplayName": "三島ふじ",
+    "appleName": "mishima_fuji",
+    "pollenDisplayName": "デリシャス",
+    "pollenName": "delicious",
+    "seedDisplayName": "国光",
+    "seedName": "kokkou"
+  },
+  {
+    "appleDisplayName": "モーレンズジョナゴレッド",
+    "appleName": "morrens_jonagored",
+    "pollenDisplayName": "紅玉",
+    "pollenName": "kougyoku",
+    "seedDisplayName": "ゴールデンデリシャス",
+    "seedName": "golden_delicious"
+  },
+  {
+    "appleDisplayName": "陸奥",
+    "appleName": "mutsu",
+    "pollenDisplayName": "印度",
+    "pollenName": "indo",
+    "seedDisplayName": "ゴールデンデリシャス",
+    "seedName": "golden_delicious"
+  },
+  {
+    "appleDisplayName": "ニュージョナゴールド",
+    "appleName": "new_jonagold",
+    "pollenDisplayName": "紅玉",
+    "pollenName": "kougyoku",
+    "seedDisplayName": "ゴールデンデリシャス",
+    "seedName": "golden_delicious"
+  },
+  {
+    "appleDisplayName": "NJ77349",
+    "appleName": "nj77349",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "不明",
+    "seedName": "unknown"
+  },
+  {
     "appleDisplayName": "奥州ロマン",
     "appleName": "ohshu_roman",
     "pollenDisplayName": "つがる",
     "pollenName": "tsugaru",
     "seedDisplayName": "シナノゴールド",
     "seedName": "shinano_gold"
+  },
+  {
+    "appleDisplayName": "おいらせ",
+    "appleName": "oirase",
+    "pollenDisplayName": "つがる",
+    "pollenName": "tsugaru",
+    "seedDisplayName": "スターキング",
+    "seedName": "starking"
+  },
+  {
+    "appleDisplayName": "王林",
+    "appleName": "ourin",
+    "pollenDisplayName": "印度",
+    "pollenName": "indo",
+    "seedDisplayName": "ゴールデンデリシャス",
+    "seedName": "golden_delicious"
+  },
+  {
+    "appleDisplayName": "大夢",
+    "appleName": "oyume",
+    "pollenDisplayName": "ゴールデンデリシャス",
+    "pollenName": "golden_delicious",
+    "seedDisplayName": "フジ",
+    "seedName": "fuji"
+  },
+  {
+    "appleDisplayName": "清明",
+    "appleName": "seimei",
+    "pollenDisplayName": "フジ",
+    "pollenName": "fuji",
+    "seedDisplayName": "ゴールデンデリシャス",
+    "seedName": "golden_delicious"
+  },
+  {
+    "appleDisplayName": "世界一",
+    "appleName": "sekaiichi",
+    "pollenDisplayName": "ゴールデンデリシャス",
+    "pollenName": "golden_delicious",
+    "seedDisplayName": "デリシャス",
+    "seedName": "delicious"
   },
   {
     "appleDisplayName": "千秋",
@@ -74,10 +370,10 @@
   {
     "appleDisplayName": "シナノドルチェ",
     "appleName": "shinano_dolce",
-    "pollenDisplayName": "つがる",
-    "pollenName": "tsugaru",
-    "seedDisplayName": "フジ",
-    "seedName": "fuji"
+    "pollenDisplayName": "千秋",
+    "pollenName": "senshu",
+    "seedDisplayName": "ゴールデンデリシャス",
+    "seedName": "golden_delicious"
   },
   {
     "appleDisplayName": "シナノゴールド",
@@ -112,6 +408,46 @@
     "seedName": "fuji"
   },
   {
+    "appleDisplayName": "新世界",
+    "appleName": "shinsekai",
+    "pollenDisplayName": "あかぎ",
+    "pollenName": "akagi",
+    "seedDisplayName": "フジ",
+    "seedName": "fuji"
+  },
+  {
+    "appleDisplayName": "秋陽",
+    "appleName": "shuuyou",
+    "pollenDisplayName": "千秋",
+    "pollenName": "senshu",
+    "seedDisplayName": "陽光",
+    "seedName": "youkou"
+  },
+  {
+    "appleDisplayName": "スリムレッド",
+    "appleName": "slim_red",
+    "pollenDisplayName": "あかぎ",
+    "pollenName": "akagi",
+    "seedDisplayName": "フジ",
+    "seedName": "fuji"
+  },
+  {
+    "appleDisplayName": "スターキング",
+    "appleName": "starking",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "不明",
+    "seedName": "unknown"
+  },
+  {
+    "appleDisplayName": "すわっこ",
+    "appleName": "suwakko",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "世界一",
+    "seedName": "sekaiichi"
+  },
+  {
     "appleDisplayName": "東光",
     "appleName": "toukou",
     "pollenDisplayName": "印度",
@@ -130,9 +466,25 @@
   {
     "appleDisplayName": "ビスタベラ",
     "appleName": "vista_bella",
+    "pollenDisplayName": "ジュライレッド",
+    "pollenName": "julyred",
+    "seedDisplayName": "NJ77349",
+    "seedName": "nj77349"
+  },
+  {
+    "appleDisplayName": "早生ふじ",
+    "appleName": "wase_fuji",
+    "pollenDisplayName": "デリシャス",
+    "pollenName": "delicious",
+    "seedDisplayName": "国光",
+    "seedName": "kokkou"
+  },
+  {
+    "appleDisplayName": "陽光",
+    "appleName": "youkou",
     "pollenDisplayName": "不明",
     "pollenName": "unknown",
-    "seedDisplayName": "不明",
-    "seedName": "unknown"
+    "seedDisplayName": "ゴールデンデリシャス",
+    "seedName": "golden_delicious"
   }
 ]
