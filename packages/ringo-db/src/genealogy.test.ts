@@ -2,6 +2,7 @@ import { describe, expect, test } from 'bun:test'
 import {
   buildColorMap,
   buildVarietyMap,
+  filterRegisteredRowsPure,
   findColorNamePure,
   findGenealogiesPure,
   findGenealogyByNamePure,
@@ -198,5 +199,54 @@ describe('findColorNamePure', () => {
 
   test('nullはredにフォールバックする', () => {
     expect(findColorNamePure(colorMap, null)).toBe('red')
+  })
+})
+
+describe('filterRegisteredRowsPure', () => {
+  const rows: VarietyRow[] = [
+    row({ displayName: '秋映', color: 'DarkRed' }),
+    row({ displayName: '王林', color: 'YellowGreen' }),
+  ]
+  const colorMap = buildColorMap(rows)
+
+  test('登録済みの表示名の行は入力順のまま残る', () => {
+    const input = [{ name: '秋映' }, { name: '王林' }]
+    expect(filterRegisteredRowsPure(colorMap, input)).toEqual([
+      { name: '秋映' },
+      { name: '王林' },
+    ])
+  })
+
+  test('マスタ未登録の名前の行は落ちる', () => {
+    const input = [{ name: '秋映' }, { name: 'foo' }]
+    expect(filterRegisteredRowsPure(colorMap, input)).toEqual([
+      { name: '秋映' },
+    ])
+  })
+
+  test('nameがnullの行は落ちる', () => {
+    const input = [{ name: null }, { name: '王林' }]
+    expect(filterRegisteredRowsPure(colorMap, input)).toEqual([
+      { name: '王林' },
+    ])
+  })
+
+  test('完全一致のみ通す(前後の空白・ひらがな表記は落ちる)', () => {
+    const input = [{ name: ' 秋映' }, { name: '秋映 ' }, { name: 'あきばえ' }]
+    expect(filterRegisteredRowsPure(colorMap, input)).toEqual([])
+  })
+
+  test('全行が未登録なら空配列を返す', () => {
+    expect(filterRegisteredRowsPure(colorMap, [{ name: 'foo' }])).toEqual([])
+  })
+
+  test('name以外のフィールドはそのまま保たれる', () => {
+    const input = [
+      { name: '秋映', month: 3, total: 7 },
+      { name: 'foo', month: 6, total: 1 },
+    ]
+    expect(filterRegisteredRowsPure(colorMap, input)).toEqual([
+      { name: '秋映', month: 3, total: 7 },
+    ])
   })
 })

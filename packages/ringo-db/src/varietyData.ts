@@ -5,6 +5,7 @@ import varietiesMarkdown from '../data/varieties.md'
 import {
   buildColorMap,
   buildVarietyMap,
+  filterRegisteredRowsPure,
   findColorNamePure,
   findGenealogiesPure,
   findGenealogyByNamePure,
@@ -31,6 +32,11 @@ export const findColorName = (name: string | null) =>
 export const findColorNameOrUndefined = (
   name: string | null,
 ): string | undefined => (name !== null ? colorMap.get(name) : undefined)
+
+/** 集計 RPC 用。品種マスタに表示名がない行(未登録の品種名・NULL)を除外する(ADR 0008) */
+export const filterRegisteredRows = <T extends { name: string | null }>(
+  rows: T[],
+): T[] => filterRegisteredRowsPure(colorMap, rows)
 
 export const findGenealogyByName = (appleName: string) =>
   JSON.stringify(findGenealogyByNamePure(varietyMap, appleName))

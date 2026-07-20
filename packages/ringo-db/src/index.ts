@@ -3,6 +3,7 @@ import { desc, sql } from 'drizzle-orm'
 import { drizzle } from 'drizzle-orm/d1'
 import { feeds } from '../db/schema/feeds'
 import {
+  filterRegisteredRows,
   findColorName,
   findColorNameOrUndefined,
   findGenealogies as findGenealogiesFromMaster,
@@ -12,6 +13,21 @@ import {
 interface Env {
   DB: D1Database
 }
+
+const MONTH_LABELS = [
+  '1月',
+  '2月',
+  '3月',
+  '4月',
+  '5月',
+  '6月',
+  '7月',
+  '8月',
+  '9月',
+  '10月',
+  '11月',
+  '12月',
+]
 
 // ringo-bsky から JSON 文字列で渡ってくる、DB へ登録する feed の入力形
 type RingoFeedInput = {
@@ -26,7 +42,7 @@ export class DatabaseWorkerEntrypoint extends WorkerEntrypoint<Env> {
     // this.env で WorkerEntrypoint のenvを参照できる
     const db = drizzle(this.env.DB)
 
-    const results = await db
+    const rows = await db
       .select({
         name: feeds.name,
         total: sql<number>`cast(count(${feeds.id}) as int)`,
@@ -34,6 +50,9 @@ export class DatabaseWorkerEntrypoint extends WorkerEntrypoint<Env> {
       .from(feeds)
       .groupBy(feeds.name)
       .orderBy(desc(sql<number>`cast(count(${feeds.id}) as int)`))
+
+    // 品種マスタに登録のない名前は集計に出さない(ADR 0008)
+    const results = filterRegisteredRows(rows)
 
     const labels = results.map((r) => r.name) ?? []
     const totals = results.map((r) => r.total) ?? []
@@ -58,7 +77,7 @@ export class DatabaseWorkerEntrypoint extends WorkerEntrypoint<Env> {
   async calculateTotalByNameAndMonth() {
     const db = drizzle(this.env.DB)
 
-    const total = await db
+    const rows = await db
       .select({
         name: feeds.name,
         month: sql<number>`cast(strftime('%m', ${feeds.createdAt}) as int)`,
@@ -73,6 +92,14 @@ export class DatabaseWorkerEntrypoint extends WorkerEntrypoint<Env> {
         feeds.name,
         sql<number>`cast(strftime('%m', ${feeds.createdAt}) as int)`,
       )
+
+    // 品種マスタに登録のない名前は集計に出さない(ADR 0008)
+    const total = filterRegisteredRows(rows)
+
+    // 対象が0件のときは以降のループが空の dataset を1件作ってしまうため、ここで返す
+    if (total.length === 0) {
+      return JSON.stringify({ labels: MONTH_LABELS, datasets: [] })
+    }
 
     const datasets = []
     const defaultAttributes = {
@@ -107,20 +134,7 @@ export class DatabaseWorkerEntrypoint extends WorkerEntrypoint<Env> {
     })
 
     const r = {
-      labels: [
-        '1月',
-        '2月',
-        '3月',
-        '4月',
-        '5月',
-        '6月',
-        '7月',
-        '8月',
-        '9月',
-        '10月',
-        '11月',
-        '12月',
-      ],
+      labels: MONTH_LABELS,
       datasets: datasets,
     }
 

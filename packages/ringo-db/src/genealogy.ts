@@ -1,4 +1,4 @@
-// varietyMaster.ts がパースした VarietyRow[] を使った系譜解決・色解決の純関数群。
+// varietyMaster.ts がパースした VarietyRow[] を使った系譜解決・色解決・マスタ照合の純関数群。
 // 旧 D1 実装(再帰CTE)の代替。呼び出し側(varietyData.ts)がモジュールスコープで
 // 品種マスタをパースして Map 化し、ここへ渡す。
 import type { VarietyRow } from './varietyMaster'
@@ -48,6 +48,15 @@ export const findColorNamePure = (
   colorMap: Map<string, string>,
   name: string | null,
 ): string => (name !== null ? colorMap.get(name) : undefined) ?? 'red'
+
+/**
+ * 集計行のうち、name が品種マスタの表示名と完全一致する行だけを残す(ADR 0008)。
+ * 照合キーは色引き(findColorNamePure)と同じ colorMap のキーで、正規化はしない。
+ */
+export const filterRegisteredRowsPure = <T extends { name: string | null }>(
+  colorMap: Map<string, string>,
+  rows: T[],
+): T[] => rows.filter((r) => r.name !== null && colorMap.has(r.name))
 
 type AncestorPair = { apple: string; appleDisplayName: string }
 
