@@ -12,6 +12,7 @@
 | 祝 | いわい | SpringGreen |  |  |  | |
 | 印度 | いんど | Red | indo | unknown | unknown | [りんごの品種 弘前市りんご公園](https://www.city.hirosaki.aomori.jp/ringopark/hinshu.html) / 青森県のりんご 改訂版 p41 / 偶発実生 |
 | エグレモント・ラセット | えぐれもんとらせっと | Tan |  |  |  | |
+| NJ77349 | えぬじぇーななななさんよんきゅう | Gainsboro | nj77349 | unknown | unknown | [GRIN-Global PI 588819 Vista Bella](https://npgsweb.ars-grin.gov/gringlobal/accessiondetail?id=1003261) / ビスタベラの種子親にあたる未命名の育種選抜系統(67634 x 122137) |
 | 遠山三系 | えんざんさんけい | FireBrick |  |  |  | |
 | envy | えんびー | Tomato |  |  |  | |
 | 炎舞 | えんぶ | FireBrick |  |  |  | |
@@ -64,6 +65,7 @@
 | 新世界 | しんせかい | LightSalmon | shinsekai | akagi | fuji | [新世界 りんご大学](https://www.ringodaigaku.com/main/hinshu/si/sinsekai.html) |
 | Jazz | じゃず | Coral |  |  |  | |
 | ジャンボ王林 | じゃんぼおうりん | YellowGreen | jumbo_ourin | indo | golden_delicious | 青森県のりんご 改訂版 p129 |
+| ジュライレッド | じゅらいれっど | OrangeRed | julyred | unknown | unknown | [GRIN-Global PI 588942 Julyred](https://npgsweb.ars-grin.gov/gringlobal/accessiondetail?id=1005005) / 系譜は NJ8 由来の複雑な育種系統で命名品種まで遡れない |
 | ジョナゴールド | じょなごーるど | LightSalmon | jonagold | kougyoku | golden_delicious | [ジョナゴールド 旬の果物百科](https://foodslink.jp/syokuzaihyakka/syun/fruit/jyonagold.htm) |
 | スカイルビー | すかいるびー | Lavender |  |  |  | |
 | スターキング | すたーきんぐ | Crimson | starking | unknown | unknown | [スターキング・デリシャス 果物ナビ](https://www.kudamononavi.com/zukan/apple/starking) / デリシャスの枝変わり |
@@ -89,7 +91,7 @@
 | ハックナイン | はっくないん | LightSalmon | hac9 | tsugaru | fuji | [りんご大学 ハックナイン](https://www.ringodaigaku.com/main/hinshu/ha/hakkunain.html) |
 | はるか | はるか | LightYellow | haruka | starking | golden_delicious | [りんご大学 はるか](https://www.ringodaigaku.com/main/hinshu/ha/haruka.html) |
 | ひめかみ | ひめかみ | IndianRed | himekami | kougyoku | fuji | [育成品種紹介 ひめかみ 農研機構](https://www.naro.go.jp/laboratory/nifts/kih/apple_cat/post_8.html) |
-| ビスタベラ | びすたべら | Red | vista_bella | unknown | unknown | 青森県のりんご 改訂版 p200 |
+| ビスタベラ | びすたべら | Red | vista_bella | julyred | nj77349 | [GRIN-Global PI 588819 Vista Bella](https://npgsweb.ars-grin.gov/gringlobal/accessiondetail?id=1003261) / 青森県のりんご 改訂版 p200 |
 | ピンクレディ | ぴんくれでぃ | Pink |  |  |  | |
 | ファーストレディ | ふぁーすとれでぃ | MistyRose |  |  |  | |
 | フジ | ふじ | Red | fuji | delicious | kokkou | [りんごの王様「ふじ」の誕生 秋田県(PDF)](https://www.pref.akita.lg.jp/uploads/public/archive_0000051281_00/%E3%82%8A%E3%82%93%E3%81%94%E3%81%AE%E7%8E%8B%E6%A7%98%E3%80%8C%E3%81%B5%E3%81%98%E3%80%8D%E3%81%AE%E8%AA%95%E7%94%9F.pdf) |

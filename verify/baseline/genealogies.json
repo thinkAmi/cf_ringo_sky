@@ -160,6 +160,14 @@
     "seedName": "golden_delicious"
   },
   {
+    "appleDisplayName": "ジュライレッド",
+    "appleName": "julyred",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "不明",
+    "seedName": "unknown"
+  },
+  {
     "appleDisplayName": "ジャンボ王林",
     "appleName": "jumbo_ourin",
     "pollenDisplayName": "印度",
@@ -296,6 +304,14 @@
     "seedName": "golden_delicious"
   },
   {
+    "appleDisplayName": "NJ77349",
+    "appleName": "nj77349",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "不明",
+    "seedName": "unknown"
+  },
+  {
     "appleDisplayName": "奥州ロマン",
     "appleName": "ohshu_roman",
     "pollenDisplayName": "つがる",
@@ -354,10 +370,10 @@
   {
     "appleDisplayName": "シナノドルチェ",
     "appleName": "shinano_dolce",
-    "pollenDisplayName": "つがる",
-    "pollenName": "tsugaru",
-    "seedDisplayName": "フジ",
-    "seedName": "fuji"
+    "pollenDisplayName": "千秋",
+    "pollenName": "senshu",
+    "seedDisplayName": "ゴールデンデリシャス",
+    "seedName": "golden_delicious"
   },
   {
     "appleDisplayName": "シナノゴールド",
@@ -450,10 +466,10 @@
   {
     "appleDisplayName": "ビスタベラ",
     "appleName": "vista_bella",
-    "pollenDisplayName": "不明",
-    "pollenName": "unknown",
-    "seedDisplayName": "不明",
-    "seedName": "unknown"
+    "pollenDisplayName": "ジュライレッド",
+    "pollenName": "julyred",
+    "seedDisplayName": "NJ77349",
+    "seedName": "nj77349"
   },
   {
     "appleDisplayName": "早生ふじ",
