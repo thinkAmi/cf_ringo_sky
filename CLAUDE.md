@@ -44,5 +44,6 @@ Co-Authored-By: <AI 作者の申告>
 ## 落とし穴
 
 - `/api/total` / `/api/month` が `[]` を返すのは `feeds` テーブルが空のときの仕様でありバグではない（系譜・色は品種マスタが持つため D1 への初期データ投入は不要）。データ投入手順は README 参照
+- マスタ未登録の品種名（例: Bluesky で `foo` と投稿）が集計に出ないのは仕様でありバグではない（ADR 0008）。feeds テーブルには生のまま残っており、品種をマスタに登録すれば過去の投稿も遡って集計に現れる
 - wrangler は devDependency のバージョンに固定して `bunx wrangler` で実行する。update を促す警告が出てもアップグレードしないこと。`d1` 系コマンドは `packages/ringo-db` で実行する
 - `bun install` はリポジトリルートでのみ実行する（入れ子の `bun.lockb` を作らない）
