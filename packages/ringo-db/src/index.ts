@@ -3,7 +3,8 @@ import { desc, sql } from 'drizzle-orm'
 import { drizzle } from 'drizzle-orm/d1'
 import { feeds } from '../db/schema/feeds'
 import {
-  findColorName,
+  buildMonthlyDatasets,
+  filterRegisteredRows,
   findColorNameOrUndefined,
   findGenealogies as findGenealogiesFromMaster,
   findGenealogyByName as findGenealogyByNameFromMaster,
@@ -12,6 +13,21 @@ import {
 interface Env {
   DB: D1Database
 }
+
+const MONTH_LABELS = [
+  '1月',
+  '2月',
+  '3月',
+  '4月',
+  '5月',
+  '6月',
+  '7月',
+  '8月',
+  '9月',
+  '10月',
+  '11月',
+  '12月',
+]
 
 // ringo-bsky から JSON 文字列で渡ってくる、DB へ登録する feed の入力形
 type RingoFeedInput = {
@@ -26,7 +42,7 @@ export class DatabaseWorkerEntrypoint extends WorkerEntrypoint<Env> {
     // this.env で WorkerEntrypoint のenvを参照できる
     const db = drizzle(this.env.DB)
 
-    const results = await db
+    const rows = await db
       .select({
         name: feeds.name,
         total: sql<number>`cast(count(${feeds.id}) as int)`,
@@ -34,6 +50,9 @@ export class DatabaseWorkerEntrypoint extends WorkerEntrypoint<Env> {
       .from(feeds)
       .groupBy(feeds.name)
       .orderBy(desc(sql<number>`cast(count(${feeds.id}) as int)`))
+
+    // 品種マスタに登録のない名前は集計に出さない(ADR 0008)
+    const results = filterRegisteredRows(rows)
 
     const labels = results.map((r) => r.name) ?? []
     const totals = results.map((r) => r.total) ?? []
@@ -58,7 +77,7 @@ export class DatabaseWorkerEntrypoint extends WorkerEntrypoint<Env> {
   async calculateTotalByNameAndMonth() {
     const db = drizzle(this.env.DB)
 
-    const total = await db
+    const rows = await db
       .select({
         name: feeds.name,
         month: sql<number>`cast(strftime('%m', ${feeds.createdAt}) as int)`,
@@ -74,54 +93,12 @@ export class DatabaseWorkerEntrypoint extends WorkerEntrypoint<Env> {
         sql<number>`cast(strftime('%m', ${feeds.createdAt}) as int)`,
       )
 
-    const datasets = []
-    const defaultAttributes = {
-      tension: 0.1,
-    }
-    let name = total[0]?.name as string
-    let quantities = new Array(12).fill(0)
-
-    for (const t of total) {
-      if (name !== t.name) {
-        datasets.push({
-          label: name,
-          data: quantities,
-          borderColor: findColorName(name),
-          backgroundColor: findColorName(name),
-          ...defaultAttributes,
-        })
-
-        name = t.name as string
-        quantities = new Array(12).fill(0)
-      }
-
-      quantities[t.month - 1] = t.total
-    }
-
-    datasets.push({
-      label: name,
-      data: quantities,
-      borderColor: findColorName(name),
-      backgroundColor: findColorName(name),
-      ...defaultAttributes,
-    })
+    // 品種マスタに登録のない名前は集計に出さない(ADR 0008)
+    const total = filterRegisteredRows(rows)
 
     const r = {
-      labels: [
-        '1月',
-        '2月',
-        '3月',
-        '4月',
-        '5月',
-        '6月',
-        '7月',
-        '8月',
-        '9月',
-        '10月',
-        '11月',
-        '12月',
-      ],
-      datasets: datasets,
+      labels: MONTH_LABELS,
+      datasets: buildMonthlyDatasets(total),
     }
 
     return JSON.stringify(r)
