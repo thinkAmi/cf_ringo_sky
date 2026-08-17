@@ -197,6 +197,7 @@ bun run verify              # baseline と比較
 ```
 
 - 各スキルの詳細は `.claude/skills/<name>/SKILL.md` を参照
+- コミットの手順はリポジトリ外のグローバルスキル `thinkami-git-commit`（[thinkAmi/agent_skills](https://github.com/thinkAmi/agent_skills)）に依存する。メッセージの規約は CLAUDE.md が持つ
 - 依存パッケージの更新は専用の `plan-dependency-upgrade` / `run-upgrade-step` を使う
 - 小さな修正・バグ修正・単発の変更はパイプライン不要。迷ったら `/grill-with-docs` から
 

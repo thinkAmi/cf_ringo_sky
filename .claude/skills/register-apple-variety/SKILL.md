@@ -19,7 +19,7 @@ description: >-
 **やること**
 - varieties.md への行の挿入(新規)または行の置換(既存品種の更新)
 - 機械ゲート `bun test` の実行と、エラーメッセージを読んでのデータ修正
-- 完了報告 → ユーザー確認 → 承認後に **commit スキル**で1コミット
+- 完了報告 → ユーザー確認 → 承認後に **thinkami-git-commit スキル**で1コミット
 
 **やらないこと(実行しない)**
 - パーサ・バリデータ(`packages/ringo-db/src/varietyMaster.ts`)やテストのコード編集。
@@ -116,10 +116,12 @@ bun test
 
 ### 6. コミット
 
-承認後、**commit スキル**の手順に従って1コミットを作る(1品種の登録 = 1論理単位)。
+承認後、**thinkami-git-commit スキル**の手順に従って1コミットを作る(1品種の登録 = 1論理単位)。
+コミット対象は varieties.md と再生成した `verify/baseline/` をパス指定でステージする。
+メッセージは CLAUDE.md のコミット規約に従い、「なぜ:」行にはこのスキルで収集した入力(依頼内容・出典)を転記する。
 
 ## このスキルに書かないもの(境界)
 
 - lint ルールの詳細(varietyMaster.ts とそのテストが正。エラーメッセージが案内する)
-- コミット規約の詳細(commit スキルと CLAUDE.md の領分)
+- コミット規約・手順の詳細(CLAUDE.md と thinkami-git-commit スキルの領分)
 - デプロイの仕組み・設定値(Workers Builds。README「デプロイに関する情報」の領分)
