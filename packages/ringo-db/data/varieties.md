@@ -120,6 +120,7 @@
 | ムーンルージュ | むーんるーじゅ | Palegoldenrod |  |  |  | |
 | 名月 | めいげつ | Orange | meigetsu | fuji | akagi | [名月(ぐんま名月) りんご大学](https://www.ringodaigaku.com/main/hinshu/ku/gunmameigetu.html) |
 | 明秋 | めいしゅう | FireBrick |  |  |  | |
+| メルシー | めるしー | LightGoldenrodYellow | merci | unknown | shinano_red | [品種登録データベース 登録番号25145 メルシー](https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=25145&LANGUAGE=Japanese) / [原田種苗](http://www.haradasyubyo.jp/2016/01/5/) / シナノレッドの実生 |
 | もりのかがやき | もりのかがやき | PaleGoldenrod |  |  |  | |
 | モーレンズジョナゴレッド | もーれんずじょなごれっど | FireBrick | morrens_jonagored | kougyoku | golden_delicious | [モーレンズジョナゴレッド 果物ナビ](https://www.kudamononavi.com/zukan/apple/morrens) / ジョナゴールドの枝変わり |
 | 陽光 | ようこう | LightSalmon | youkou | unknown | golden_delicious | [陽光 りんご大学](https://www.ringodaigaku.com/main/hinshu/yo/youkou.html) |
