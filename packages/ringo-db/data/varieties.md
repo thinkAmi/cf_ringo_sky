@@ -82,6 +82,7 @@
 | 世界一 | せかいいち | LightSalmon | sekaiichi | golden_delicious | delicious | [世界一 果物ナビ](https://www.kudamononavi.com/zukan/apple/sekaiichi) |
 | 千秋 | せんしゅう | LightSalmon | senshu | fuji | toukou | [リンゴ'千秋'の裂果に関する研究 第1報 秋田県果樹試験場研究報告(PDF)](https://www.pref.akita.lg.jp/uploads/public/archive_0000001053_00/%E3%83%AA%E3%83%B3%E3%82%B4%E2%80%99%E5%8D%83%E7%A7%8B%E2%80%99%E3%81%AE%E8%A3%82%E6%9E%9C%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E7%A0%94%E7%A9%B6.pdf) |
 | 大紅栄 | だいこうえい | FireBrick | daikouei | unknown | miki_life | [大紅栄 りんご大学](https://www.ringodaigaku.com/main/hinshu/ta/daikouei.html) |
+| 伊達ロマン | だてろまん | MediumVioletRed | date_roman | unknown | beni_roman | [品種紹介 紅果園](https://kokaen.jp/hinsyu.html) / [伊達ロマン(高野8号) 紅果園 ロマンシリーズ(PDF)](https://kokaen.jp/pdf/romanseries.pdf) / 紅ロマンのオープン交配のため花粉親不明 |
 | ちなつ | ちなつ | Papayawhip |  |  |  | |
 | 千雪 | ちゆき | MediumVioletred |  |  |  | |
 | 超さん太 | ちょうさんた | FireBrick |  |  |  | |
