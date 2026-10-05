@@ -109,7 +109,7 @@
 | 紅しのぶ | べにしのぶ | MediumVioletred |  |  |  | |
 | 紅将軍 | べにしょうぐん | FireBrick | benishougun | delicious | kokkou | 青森県のりんご 改訂版 p227 / やたかの枝変わり |
 | 紅陽光 | べにようこう | FireBrick |  |  |  | |
-| 紅ロマン | べにろまん | FireBrick |  |  |  | |
+| 紅ロマン | べにろまん | FireBrick | beni_roman | sansa | shinano_red | [品種紹介 紅果園](https://kokaen.jp/hinsyu.html) / [紅ロマン(高野1号) 紅果園 ロマンシリーズ(PDF)](https://kokaen.jp/pdf/romanseries.pdf) |
 | ベル・ド・ボスクープ | べるどぼすくーぷ | OliveDrab |  |  |  | |
 | ほおずり | ほおずり | Brown | hoozuri | kougyoku | fuji | [ほおずり 福島県果樹研究所(PDF)](https://www.pref.fukushima.lg.jp/uploaded/attachment/55259.pdf) |
 | 北斗 | ほくと | LightSalmon | hokuto | unknown | fuji | [北斗 旬の果物百科](https://foodslink.jp/syokuzaihyakka/syun/fruit/Hokuto.htm) |
