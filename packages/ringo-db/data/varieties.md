@@ -43,6 +43,7 @@
 | 幸寿 | こうじゅ | Salmon | kouju | unknown | miki_life | [幸寿 りんご大学](https://www.ringodaigaku.com/main/hinshu/ko/kouju.html) / 花粉親は千秋×ふじの未命名系統 |
 | こうたろう | こうたろう | LightSalmon |  |  |  | |
 | 高徳 | こうとく | AntiqueWhite | koutoku | unknown | toukou | [高徳 旬の果物百科](https://foodslink.jp/syokuzaihyakka/syun/fruit/apple-Koutoku.htm) |
+| 黄明 | こうめい | PaleGoldenrod | koumei | senshu | miki_life | [黄明 りんご大学](https://www.ringodaigaku.com/main/hinshu/ko/koumei.html) |
 | 昂林 | こうりん | MistyRose | kourin | delicious | kokkou | [昂林 りんご大学](https://www.ringodaigaku.com/main/hinshu/ko/kourin.html) / フジの枝変わり |
 | 紅露 | こうろ | FloralWhite |  |  |  | |
 | コックスオレンジピピン | こっくすおれんじぴぴん | SandyBrown | cox_orange_pippin | unknown | unknown | [Cox's Orange Pippin National Fruit Collection](https://nationalfruitcollection.org.uk/full2.php?fruit=apple&id=1330) / NFC は Ribston Pippin x Unknown とするが、DNA 解析で異説(Margil の実生)あり([Ribston Pippin Orange Pippin](https://www.orangepippin.com/varieties/apples/ribston-pippin))のため遡らない |
