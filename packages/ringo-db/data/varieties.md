@@ -27,6 +27,7 @@
 | オータムドレス | おーたむどれす | DarkMagenta |  |  |  | |
 | 鏡の私 | かがみのわたし | Chartreuse |  |  |  | |
 | 華宝 | かほう | FireBrick | kahou | unknown | shinano_sweet | [華宝 りんご大学](https://www.ringodaigaku.com/main/hinshu/ka/kahou.html) |
+| ガラ | がら | Coral | gala | golden_delicious | kidds_orange_red | [Gala National Fruit Collection](https://nationalfruitcollection.org.uk/full2.php?fruit=apple&id=2183) |
 | きおう | きおう | DarkOrange | kiou | senshu | ourin | [きおう りんご大学](https://www.ringodaigaku.com/main/hinshu/ki/kiou.html) |
 | 北紅 | きたくれない | Maroon |  |  |  | |
 | きたろう | きたろう | Goldenrod |  |  |  | |

@@ -104,6 +104,14 @@
     "seedName": "kokkou"
   },
   {
+    "appleDisplayName": "ガラ",
+    "appleName": "gala",
+    "pollenDisplayName": "ゴールデンデリシャス",
+    "pollenName": "golden_delicious",
+    "seedDisplayName": "キッズオレンジレッド",
+    "seedName": "kidds_orange_red"
+  },
+  {
     "appleDisplayName": "ゴールドロマン",
     "appleName": "gold_roman",
     "pollenDisplayName": "つがる",
