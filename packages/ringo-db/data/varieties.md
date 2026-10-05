@@ -30,6 +30,7 @@
 | きおう | きおう | DarkOrange | kiou | senshu | ourin | [きおう りんご大学](https://www.ringodaigaku.com/main/hinshu/ki/kiou.html) |
 | 北紅 | きたくれない | Maroon |  |  |  | |
 | きたろう | きたろう | Goldenrod |  |  |  | |
+| キッズオレンジレッド | きっずおれんじれっど | Chocolate | kidds_orange_red | delicious | cox_orange_pippin | [Kidd's Orange Red National Fruit Collection](https://nationalfruitcollection.org.uk/full2.php?fruit=apple&id=3201) |
 | キュート | きゅーと | Palegoldenrod | cute | tsugaru | senshu | [キュート りんご大学](https://www.ringodaigaku.com/main/hinshu/ki/cute.html) |
 | 金星 | きんせい | Palegoldenrod | kinsei | unknown | golden_delicious | 青森県のりんご 改訂版 p77 |
 | Queen | くいーん | LightSalmon |  |  |  | |
