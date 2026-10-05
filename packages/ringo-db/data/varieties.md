@@ -137,5 +137,6 @@
 | ルビースイート | るびーすいーと | Pink |  |  |  | |
 | レッドゴールド | れっどごーるど | Red |  |  |  | |
 | Rockit | ろきっと | FireBrick |  |  |  | |
+| ロマンのしずく | ろまんのしずく | Khaki | roman_no_shizuku | unknown | shinano_gold | [品種紹介 紅果園](https://kokaen.jp/hinsyu.html) / [ロマンのしずく(高野10号) 紅果園 ロマンシリーズ(PDF)](https://kokaen.jp/pdf/romanseries.pdf) / 花粉親不明(PDF に「片親はトキと思われる」との記載あり) |
 | ローズパール | ろーずぱーる | Pink |  |  |  | |
 | 早生ふじ | わせふじ | LightSalmon | wase_fuji | delicious | kokkou | [ふじ(枝変わり) りんご大学](https://www.ringodaigaku.com/main/hinshu/hu/huji_eda.html) / ふじの枝変わり |
