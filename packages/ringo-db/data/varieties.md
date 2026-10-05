@@ -52,7 +52,7 @@
 | さとあかり | さとあかり | LightSalmon |  |  |  | |
 | サマーチャンス | さまーちゃんす | BlanchedAlmond |  |  |  | |
 | サマーランド | さまーらんど | LightCoral |  |  |  | |
-| さんさ | さんさ | LightSalmon |  |  |  | |
+| さんさ | さんさ | LightSalmon | sansa | akane | gala | [育成品種紹介 さんさ 農研機構](https://www.naro.go.jp/laboratory/nifts/kih/apple_cat/post_6.html) |
 | しおりルビー | しおりるびー | FireBrick |  |  |  | |
 | 信濃あかり | しなのあかり | Crimson |  |  |  | |
 | シナノゴールド | しなのごーるど | Gold | shinano_gold | senshu | golden_delicious | [りんごの品種育成 長野県果樹試験場](https://www.pref.nagano.lg.jp/kajushiken/jisseki/joho/ringo.html) |
