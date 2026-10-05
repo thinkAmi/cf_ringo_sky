@@ -47,6 +47,7 @@
 | コックスオレンジピピン | こっくすおれんじぴぴん | SandyBrown | cox_orange_pippin | unknown | unknown | [Cox's Orange Pippin National Fruit Collection](https://nationalfruitcollection.org.uk/full2.php?fruit=apple&id=1330) / NFC は Ribston Pippin x Unknown とするが、DNA 解析で異説(Margil の実生)あり([Ribston Pippin Orange Pippin](https://www.orangepippin.com/varieties/apples/ribston-pippin))のため遡らない |
 | 国光 | こっこう | FireBrick | kokkou | unknown | unknown | [りんごの品種 弘前市りんご公園](https://www.city.hirosaki.aomori.jp/ringopark/hinshu.html) / 青森県のりんご 改訂版 p109 / 偶発実生 |
 | KORU | こる | Crimson |  |  |  | |
+| 御所川原 | ごしょがわら | Tomato | goshogawara | unknown | unknown | [御所川原 りんご大学](https://www.ringodaigaku.com/main/hinshu/ko/gosyogawara.html) / 交配不明。花粉親をプリトニアとする販売サイトの記述あり([まごころふるさと便](https://furusatobin.jp/gl/shops/ca/61.html)) |
 | ゴールデンデリシャス | ごーるでんでりしゃす | DarkOrange | golden_delicious | unknown | unknown | 青森県のりんご 改訂版 p102 |
 | ゴールドロマン | ごーるどろまん | Yellow | gold_roman | tsugaru | shinano_gold | [品種登録データベース 登録番号20601](https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=20601&LANGUAGE=Japanese) / [ゴールドロマン(高野3号) 紅果園 ロマンシリーズ(PDF)](https://kokaen.jp/pdf/romanseries.pdf) |
 | 彩香 | さいか | FireBrick |  |  |  | |
