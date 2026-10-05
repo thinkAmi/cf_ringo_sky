@@ -100,6 +100,7 @@
 | 夏乙女 | なつおとめ | CornSilk |  |  |  | |
 | ニュージョナゴールド | にゅーじょなごーるど | LightSalmon | new_jonagold | kougyoku | golden_delicious | [りんご大学 ニュージョナゴールド](https://www.ringodaigaku.com/main/hinshu/ni/newjyonagold.html) / ジョナゴールドの枝変わり |
 | ハックナイン | はっくないん | LightSalmon | hac9 | tsugaru | fuji | [りんご大学 ハックナイン](https://www.ringodaigaku.com/main/hinshu/ha/hakkunain.html) |
+| 初恋 | はつこい | Red | hatsukoi | unknown | tsugaru | [りんごの新品種「初恋」 りんご大学ブログ](https://www.ringodaigaku.com/ringo_blog/blog/2022/10/18/11657.html) / つがるの実生のため花粉親不明 |
 | はるか | はるか | LightYellow | haruka | starking | golden_delicious | [りんご大学 はるか](https://www.ringodaigaku.com/main/hinshu/ha/haruka.html) |
 | ひめかみ | ひめかみ | IndianRed | himekami | kougyoku | fuji | [育成品種紹介 ひめかみ 農研機構](https://www.naro.go.jp/laboratory/nifts/kih/apple_cat/post_8.html) |
 | ビスタベラ | びすたべら | Red | vista_bella | julyred | nj77349 | [GRIN-Global PI 588819 Vista Bella](https://npgsweb.ars-grin.gov/gringlobal/accessiondetail?id=1003261) / 青森県のりんご 改訂版 p200 |
