@@ -81,6 +81,7 @@
 | 超さん太 | ちょうさんた | FireBrick |  |  |  | |
 | cheekie | ちーきー | MediumVioletred |  |  |  | |
 | つがる | つがる | Brown | tsugaru | kougyoku | golden_delicious | [りんごの品種 弘前市りんご公園](https://www.city.hirosaki.aomori.jp/ringopark/hinshu.html) |
+| デボンシャークワレンデン | でぼんしゃーくわれんでん | Brown | devonshire_quarrenden | unknown | unknown | [Devonshire Quarrenden National Fruit Collection](https://nationalfruitcollection.org.uk/full2.php?fruit=apple&id=1561) / 親の記載なし(1678年の記録が最古) |
 | デリシャス | でりしゃす | LightSalmon | delicious | unknown | unknown | [りんごの品種 弘前市りんご公園](https://www.city.hirosaki.aomori.jp/ringopark/hinshu.html) / 青森県のりんご 改訂版 p169 / 偶発実生 |
 | 東光 | とうこう | Red | toukou | indo | golden_delicious | [りんごの品種 弘前市りんご公園](https://www.city.hirosaki.aomori.jp/ringopark/hinshu.html) |
 | トキ | とき | Yellow |  |  |  | |
