@@ -16,6 +16,14 @@
     "seedName": "golden_delicious"
   },
   {
+    "appleDisplayName": "あかね",
+    "appleName": "akane",
+    "pollenDisplayName": "ウースターペアメイン",
+    "pollenName": "worcester_pearmain",
+    "seedDisplayName": "紅玉",
+    "seedName": "kougyoku"
+  },
+  {
     "appleDisplayName": "秋茜",
     "appleName": "akiakane",
     "pollenDisplayName": "フジ",
@@ -40,12 +48,28 @@
     "seedName": "golden_delicious"
   },
   {
+    "appleDisplayName": "紅ロマン",
+    "appleName": "beni_roman",
+    "pollenDisplayName": "さんさ",
+    "pollenName": "sansa",
+    "seedDisplayName": "シナノレッド",
+    "seedName": "shinano_red"
+  },
+  {
     "appleDisplayName": "紅将軍",
     "appleName": "benishougun",
     "pollenDisplayName": "デリシャス",
     "pollenName": "delicious",
     "seedDisplayName": "国光",
     "seedName": "kokkou"
+  },
+  {
+    "appleDisplayName": "コックスオレンジピピン",
+    "appleName": "cox_orange_pippin",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "不明",
+    "seedName": "unknown"
   },
   {
     "appleDisplayName": "キュート",
@@ -64,6 +88,14 @@
     "seedName": "miki_life"
   },
   {
+    "appleDisplayName": "伊達ロマン",
+    "appleName": "date_roman",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "紅ロマン",
+    "seedName": "beni_roman"
+  },
+  {
     "appleDisplayName": "デリシャス",
     "appleName": "delicious",
     "pollenDisplayName": "不明",
@@ -72,12 +104,36 @@
     "seedName": "unknown"
   },
   {
+    "appleDisplayName": "デボンシャークワレンデン",
+    "appleName": "devonshire_quarrenden",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "不明",
+    "seedName": "unknown"
+  },
+  {
+    "appleDisplayName": "江刺ロマン",
+    "appleName": "esashi_roman",
+    "pollenDisplayName": "紅ロマン",
+    "pollenName": "beni_roman",
+    "seedDisplayName": "シナノゴールド",
+    "seedName": "shinano_gold"
+  },
+  {
     "appleDisplayName": "フジ",
     "appleName": "fuji",
     "pollenDisplayName": "デリシャス",
     "pollenName": "delicious",
     "seedDisplayName": "国光",
     "seedName": "kokkou"
+  },
+  {
+    "appleDisplayName": "ガラ",
+    "appleName": "gala",
+    "pollenDisplayName": "ゴールデンデリシャス",
+    "pollenName": "golden_delicious",
+    "seedDisplayName": "キッズオレンジレッド",
+    "seedName": "kidds_orange_red"
   },
   {
     "appleDisplayName": "ゴールドロマン",
@@ -90,6 +146,14 @@
   {
     "appleDisplayName": "ゴールデンデリシャス",
     "appleName": "golden_delicious",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "不明",
+    "seedName": "unknown"
+  },
+  {
+    "appleDisplayName": "御所川原",
+    "appleName": "goshogawara",
     "pollenDisplayName": "不明",
     "pollenName": "unknown",
     "seedDisplayName": "不明",
@@ -110,6 +174,14 @@
     "pollenName": "starking",
     "seedDisplayName": "ゴールデンデリシャス",
     "seedName": "golden_delicious"
+  },
+  {
+    "appleDisplayName": "初恋",
+    "appleName": "hatsukoi",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "つがる",
+    "seedName": "tsugaru"
   },
   {
     "appleDisplayName": "ひめかみ",
@@ -184,12 +256,28 @@
     "seedName": "shinano_sweet"
   },
   {
+    "appleDisplayName": "キッズオレンジレッド",
+    "appleName": "kidds_orange_red",
+    "pollenDisplayName": "デリシャス",
+    "pollenName": "delicious",
+    "seedDisplayName": "コックスオレンジピピン",
+    "seedName": "cox_orange_pippin"
+  },
+  {
     "appleDisplayName": "金星",
     "appleName": "kinsei",
     "pollenDisplayName": "不明",
     "pollenName": "unknown",
     "seedDisplayName": "ゴールデンデリシャス",
     "seedName": "golden_delicious"
+  },
+  {
+    "appleDisplayName": "錦秋",
+    "appleName": "kinshu",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "千秋",
+    "seedName": "senshu"
   },
   {
     "appleDisplayName": "きおう",
@@ -214,6 +302,22 @@
     "pollenName": "unknown",
     "seedDisplayName": "不明",
     "seedName": "unknown"
+  },
+  {
+    "appleDisplayName": "幸寿",
+    "appleName": "kouju",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "未希ライフ",
+    "seedName": "miki_life"
+  },
+  {
+    "appleDisplayName": "黄明",
+    "appleName": "koumei",
+    "pollenDisplayName": "千秋",
+    "pollenName": "senshu",
+    "seedDisplayName": "未希ライフ",
+    "seedName": "miki_life"
   },
   {
     "appleDisplayName": "昂林",
@@ -352,6 +456,38 @@
     "seedName": "fuji"
   },
   {
+    "appleDisplayName": "レッドキュー",
+    "appleName": "red_q",
+    "pollenDisplayName": "金星",
+    "pollenName": "kinsei",
+    "seedDisplayName": "御所川原",
+    "seedName": "goshogawara"
+  },
+  {
+    "appleDisplayName": "ロマンのしずく",
+    "appleName": "roman_no_shizuku",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "シナノゴールド",
+    "seedName": "shinano_gold"
+  },
+  {
+    "appleDisplayName": "彩香",
+    "appleName": "saika",
+    "pollenDisplayName": "王林",
+    "pollenName": "ourin",
+    "seedDisplayName": "あかね",
+    "seedName": "akane"
+  },
+  {
+    "appleDisplayName": "さんさ",
+    "appleName": "sansa",
+    "pollenDisplayName": "あかね",
+    "pollenName": "akane",
+    "seedDisplayName": "ガラ",
+    "seedName": "gala"
+  },
+  {
     "appleDisplayName": "清明",
     "appleName": "seimei",
     "pollenDisplayName": "フジ",
@@ -486,6 +622,14 @@
     "pollenName": "delicious",
     "seedDisplayName": "国光",
     "seedName": "kokkou"
+  },
+  {
+    "appleDisplayName": "ウースターペアメイン",
+    "appleName": "worcester_pearmain",
+    "pollenDisplayName": "不明",
+    "pollenName": "unknown",
+    "seedDisplayName": "デボンシャークワレンデン",
+    "seedName": "devonshire_quarrenden"
   },
   {
     "appleDisplayName": "陽光",

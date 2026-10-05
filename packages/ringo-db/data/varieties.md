@@ -2,6 +2,7 @@
 |-------|------|-----|------|-------|-------|------|
 | あいかの香り | あいかのかおり | Crimson | aikanokaori | unknown | fuji | [あいかの香り 旬の果物百科](https://foodslink.jp/syokuzaihyakka/syun/fruit/apple-Aikanokaori.htm) |
 | あかぎ | あかぎ | AntiqueWhite | akagi | kougyoku | golden_delicious | [あかぎ りんご大学](https://www.ringodaigaku.com/main/hinshu/a/akagi.html) |
+| あかね | あかね | Crimson | akane | worcester_pearmain | kougyoku | [育成品種紹介 あかね 農研機構](https://www.naro.go.jp/laboratory/nifts/kih/apple_cat/post_12.html) |
 | 秋茜 | あきあかね | FireBrick | akiakane | fuji | golden_delicious | [秋茜 旬の果物百科](https://foodslink.jp/syokuzaihyakka/syun/fruit/apple-Akiakane.htm) / 清明の枝変わり |
 | 秋田ゴールド | あきたごーるど | Goldenrod | akita_gold | fuji | golden_delicious | [アキタゴールド りんご大学](https://www.ringodaigaku.com/main/hinshu/a/akitagold.html) |
 | 秋映 | あきばえ | DarkRed | akibae | tsugaru | senshu | [秋映 旬の果物百科](https://foodslink.jp/syokuzaihyakka/syun/fruit/akibae.htm) |
@@ -11,7 +12,9 @@
 | Ambrosia | あんぶろしあ | IndianRed |  |  |  | |
 | 祝 | いわい | SpringGreen |  |  |  | |
 | 印度 | いんど | Red | indo | unknown | unknown | [りんごの品種 弘前市りんご公園](https://www.city.hirosaki.aomori.jp/ringopark/hinshu.html) / 青森県のりんご 改訂版 p41 / 偶発実生 |
+| ウースターペアメイン | うーすたーぺあめいん | IndianRed | worcester_pearmain | unknown | devonshire_quarrenden | [Worcester Pearmain National Fruit Collection](https://nationalfruitcollection.org.uk/full2.php?fruit=apple&id=6920) / Devonshire Quarrenden x Unknown |
 | エグレモント・ラセット | えぐれもんとらせっと | Tan |  |  |  | |
+| 江刺ロマン | えさしろまん | OrangeRed | esashi_roman | beni_roman | shinano_gold | [品種紹介 紅果園](https://kokaen.jp/hinsyu.html) / [江刺ロマン(高野7号) 紅果園 ロマンシリーズ(PDF)](https://kokaen.jp/pdf/romanseries.pdf) |
 | NJ77349 | えぬじぇーななななさんよんきゅう | Gainsboro | nj77349 | unknown | unknown | [GRIN-Global PI 588819 Vista Bella](https://npgsweb.ars-grin.gov/gringlobal/accessiondetail?id=1003261) / ビスタベラの種子親にあたる未命名の育種選抜系統(67634 x 122137) |
 | 遠山三系 | えんざんさんけい | FireBrick |  |  |  | |
 | envy | えんびー | Tomato |  |  |  | |
@@ -25,29 +28,36 @@
 | オータムドレス | おーたむどれす | DarkMagenta |  |  |  | |
 | 鏡の私 | かがみのわたし | Chartreuse |  |  |  | |
 | 華宝 | かほう | FireBrick | kahou | unknown | shinano_sweet | [華宝 りんご大学](https://www.ringodaigaku.com/main/hinshu/ka/kahou.html) |
+| ガラ | がら | Coral | gala | golden_delicious | kidds_orange_red | [Gala National Fruit Collection](https://nationalfruitcollection.org.uk/full2.php?fruit=apple&id=2183) |
 | きおう | きおう | DarkOrange | kiou | senshu | ourin | [きおう りんご大学](https://www.ringodaigaku.com/main/hinshu/ki/kiou.html) |
 | 北紅 | きたくれない | Maroon |  |  |  | |
 | きたろう | きたろう | Goldenrod |  |  |  | |
+| キッズオレンジレッド | きっずおれんじれっど | Chocolate | kidds_orange_red | delicious | cox_orange_pippin | [Kidd's Orange Red National Fruit Collection](https://nationalfruitcollection.org.uk/full2.php?fruit=apple&id=3201) |
 | キュート | きゅーと | Palegoldenrod | cute | tsugaru | senshu | [キュート りんご大学](https://www.ringodaigaku.com/main/hinshu/ki/cute.html) |
+| 錦秋 | きんしゅう | DarkRed | kinshu | unknown | senshu | [錦秋 農研機構](https://www.naro.go.jp/publicity_report/press/laboratory/nifts/081278.html) / 花粉親は4-4349(つがる×いわかみ)の未命名系統 |
 | 金星 | きんせい | Palegoldenrod | kinsei | unknown | golden_delicious | 青森県のりんご 改訂版 p77 |
 | Queen | くいーん | LightSalmon |  |  |  | |
 | 紅の夢 | くれないのゆめ | FireBrick | kurenainoyume | unknown | kougyoku | [紅の夢 弘前大学公式](https://nature.hirosaki-u.ac.jp/kurenainoyume/history.html) |
 | グラニースミス | ぐらにーすみす | Green |  |  |  | |
 | 恋空 | こいぞら | Rosybrown |  |  |  | |
 | 紅玉 | こうぎょく | Maroon | kougyoku | unknown | unknown | 青森県のりんご 改訂版 p90 |
+| 幸寿 | こうじゅ | Salmon | kouju | unknown | miki_life | [幸寿 りんご大学](https://www.ringodaigaku.com/main/hinshu/ko/kouju.html) / 花粉親は千秋×ふじの未命名系統 |
 | こうたろう | こうたろう | LightSalmon |  |  |  | |
 | 高徳 | こうとく | AntiqueWhite | koutoku | unknown | toukou | [高徳 旬の果物百科](https://foodslink.jp/syokuzaihyakka/syun/fruit/apple-Koutoku.htm) |
+| 黄明 | こうめい | PaleGoldenrod | koumei | senshu | miki_life | [黄明 りんご大学](https://www.ringodaigaku.com/main/hinshu/ko/koumei.html) |
 | 昂林 | こうりん | MistyRose | kourin | delicious | kokkou | [昂林 りんご大学](https://www.ringodaigaku.com/main/hinshu/ko/kourin.html) / フジの枝変わり |
 | 紅露 | こうろ | FloralWhite |  |  |  | |
+| コックスオレンジピピン | こっくすおれんじぴぴん | SandyBrown | cox_orange_pippin | unknown | unknown | [Cox's Orange Pippin National Fruit Collection](https://nationalfruitcollection.org.uk/full2.php?fruit=apple&id=1330) / NFC は Ribston Pippin x Unknown とするが、DNA 解析で異説(Margil の実生)あり([Ribston Pippin Orange Pippin](https://www.orangepippin.com/varieties/apples/ribston-pippin))のため遡らない |
 | 国光 | こっこう | FireBrick | kokkou | unknown | unknown | [りんごの品種 弘前市りんご公園](https://www.city.hirosaki.aomori.jp/ringopark/hinshu.html) / 青森県のりんご 改訂版 p109 / 偶発実生 |
 | KORU | こる | Crimson |  |  |  | |
+| 御所川原 | ごしょがわら | Tomato | goshogawara | unknown | unknown | [御所川原 りんご大学](https://www.ringodaigaku.com/main/hinshu/ko/gosyogawara.html) / 交配不明。花粉親をプリトニアとする販売サイトの記述あり([まごころふるさと便](https://furusatobin.jp/gl/shops/ca/61.html)) |
 | ゴールデンデリシャス | ごーるでんでりしゃす | DarkOrange | golden_delicious | unknown | unknown | 青森県のりんご 改訂版 p102 |
 | ゴールドロマン | ごーるどろまん | Yellow | gold_roman | tsugaru | shinano_gold | [品種登録データベース 登録番号20601](https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=20601&LANGUAGE=Japanese) / [ゴールドロマン(高野3号) 紅果園 ロマンシリーズ(PDF)](https://kokaen.jp/pdf/romanseries.pdf) |
-| 彩香 | さいか | FireBrick |  |  |  | |
+| 彩香 | さいか | FireBrick | saika | ourin | akane | [あおり9(旧名:彩香) りんご大学](https://www.ringodaigaku.com/main/hinshu/sa/saika.html) / [弘前経済新聞 2025-10-22](https://hirosaki.keizai.biz/headline/2617/) / 品種名はあおり9。2025年10月28日から流通名はあおり9 |
 | さとあかり | さとあかり | LightSalmon |  |  |  | |
 | サマーチャンス | さまーちゃんす | BlanchedAlmond |  |  |  | |
 | サマーランド | さまーらんど | LightCoral |  |  |  | |
-| さんさ | さんさ | LightSalmon |  |  |  | |
+| さんさ | さんさ | LightSalmon | sansa | akane | gala | [育成品種紹介 さんさ 農研機構](https://www.naro.go.jp/laboratory/nifts/kih/apple_cat/post_6.html) |
 | しおりルビー | しおりるびー | FireBrick |  |  |  | |
 | 信濃あかり | しなのあかり | Crimson |  |  |  | |
 | シナノゴールド | しなのごーるど | Gold | shinano_gold | senshu | golden_delicious | [りんごの品種育成 長野県果樹試験場](https://www.pref.nagano.lg.jp/kajushiken/jisseki/joho/ringo.html) |
@@ -76,11 +86,13 @@
 | 世界一 | せかいいち | LightSalmon | sekaiichi | golden_delicious | delicious | [世界一 果物ナビ](https://www.kudamononavi.com/zukan/apple/sekaiichi) |
 | 千秋 | せんしゅう | LightSalmon | senshu | fuji | toukou | [リンゴ'千秋'の裂果に関する研究 第1報 秋田県果樹試験場研究報告(PDF)](https://www.pref.akita.lg.jp/uploads/public/archive_0000001053_00/%E3%83%AA%E3%83%B3%E3%82%B4%E2%80%99%E5%8D%83%E7%A7%8B%E2%80%99%E3%81%AE%E8%A3%82%E6%9E%9C%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E7%A0%94%E7%A9%B6.pdf) |
 | 大紅栄 | だいこうえい | FireBrick | daikouei | unknown | miki_life | [大紅栄 りんご大学](https://www.ringodaigaku.com/main/hinshu/ta/daikouei.html) |
+| 伊達ロマン | だてろまん | MediumVioletRed | date_roman | unknown | beni_roman | [品種紹介 紅果園](https://kokaen.jp/hinsyu.html) / [伊達ロマン(高野8号) 紅果園 ロマンシリーズ(PDF)](https://kokaen.jp/pdf/romanseries.pdf) / 紅ロマンのオープン交配のため花粉親不明 |
 | ちなつ | ちなつ | Papayawhip |  |  |  | |
 | 千雪 | ちゆき | MediumVioletred |  |  |  | |
 | 超さん太 | ちょうさんた | FireBrick |  |  |  | |
 | cheekie | ちーきー | MediumVioletred |  |  |  | |
 | つがる | つがる | Brown | tsugaru | kougyoku | golden_delicious | [りんごの品種 弘前市りんご公園](https://www.city.hirosaki.aomori.jp/ringopark/hinshu.html) |
+| デボンシャークワレンデン | でぼんしゃーくわれんでん | Brown | devonshire_quarrenden | unknown | unknown | [Devonshire Quarrenden National Fruit Collection](https://nationalfruitcollection.org.uk/full2.php?fruit=apple&id=1561) / 親の記載なし(1678年の記録が最古) |
 | デリシャス | でりしゃす | LightSalmon | delicious | unknown | unknown | [りんごの品種 弘前市りんご公園](https://www.city.hirosaki.aomori.jp/ringopark/hinshu.html) / 青森県のりんご 改訂版 p169 / 偶発実生 |
 | 東光 | とうこう | Red | toukou | indo | golden_delicious | [りんごの品種 弘前市りんご公園](https://www.city.hirosaki.aomori.jp/ringopark/hinshu.html) |
 | トキ | とき | Yellow |  |  |  | |
@@ -89,6 +101,7 @@
 | 夏乙女 | なつおとめ | CornSilk |  |  |  | |
 | ニュージョナゴールド | にゅーじょなごーるど | LightSalmon | new_jonagold | kougyoku | golden_delicious | [りんご大学 ニュージョナゴールド](https://www.ringodaigaku.com/main/hinshu/ni/newjyonagold.html) / ジョナゴールドの枝変わり |
 | ハックナイン | はっくないん | LightSalmon | hac9 | tsugaru | fuji | [りんご大学 ハックナイン](https://www.ringodaigaku.com/main/hinshu/ha/hakkunain.html) |
+| 初恋 | はつこい | Red | hatsukoi | unknown | tsugaru | [りんごの新品種「初恋」 りんご大学ブログ](https://www.ringodaigaku.com/ringo_blog/blog/2022/10/18/11657.html) / つがるの実生のため花粉親不明 |
 | はるか | はるか | LightYellow | haruka | starking | golden_delicious | [りんご大学 はるか](https://www.ringodaigaku.com/main/hinshu/ha/haruka.html) |
 | ひめかみ | ひめかみ | IndianRed | himekami | kougyoku | fuji | [育成品種紹介 ひめかみ 農研機構](https://www.naro.go.jp/laboratory/nifts/kih/apple_cat/post_8.html) |
 | ビスタベラ | びすたべら | Red | vista_bella | julyred | nj77349 | [GRIN-Global PI 588819 Vista Bella](https://npgsweb.ars-grin.gov/gringlobal/accessiondetail?id=1003261) / 青森県のりんご 改訂版 p200 |
@@ -103,7 +116,7 @@
 | 紅しのぶ | べにしのぶ | MediumVioletred |  |  |  | |
 | 紅将軍 | べにしょうぐん | FireBrick | benishougun | delicious | kokkou | 青森県のりんご 改訂版 p227 / やたかの枝変わり |
 | 紅陽光 | べにようこう | FireBrick |  |  |  | |
-| 紅ロマン | べにろまん | FireBrick |  |  |  | |
+| 紅ロマン | べにろまん | FireBrick | beni_roman | sansa | shinano_red | [品種紹介 紅果園](https://kokaen.jp/hinsyu.html) / [紅ロマン(高野1号) 紅果園 ロマンシリーズ(PDF)](https://kokaen.jp/pdf/romanseries.pdf) |
 | ベル・ド・ボスクープ | べるどぼすくーぷ | OliveDrab |  |  |  | |
 | ほおずり | ほおずり | Brown | hoozuri | kougyoku | fuji | [ほおずり 福島県果樹研究所(PDF)](https://www.pref.fukushima.lg.jp/uploaded/attachment/55259.pdf) |
 | 北斗 | ほくと | LightSalmon | hokuto | unknown | fuji | [北斗 旬の果物百科](https://foodslink.jp/syokuzaihyakka/syun/fruit/Hokuto.htm) |
@@ -127,7 +140,9 @@
 | ラリタン | らりたん | OldLace |  |  |  | |
 | 凛夏 | りんか | LavenderBlush |  |  |  | [品種登録迅速化総合電子化システム](https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=14918&LANGUAGE=Japanese) |
 | ルビースイート | るびーすいーと | Pink |  |  |  | |
+| レッドキュー | れっどきゅー | Maroon | red_q | kinsei | goshogawara | [レッド キュー 旬の果物百科](https://foodslink.jp/syokuzaihyakka/syun/fruit/apple-RedQ.htm) |
 | レッドゴールド | れっどごーるど | Red |  |  |  | |
 | Rockit | ろきっと | FireBrick |  |  |  | |
+| ロマンのしずく | ろまんのしずく | Khaki | roman_no_shizuku | unknown | shinano_gold | [品種紹介 紅果園](https://kokaen.jp/hinsyu.html) / [ロマンのしずく(高野10号) 紅果園 ロマンシリーズ(PDF)](https://kokaen.jp/pdf/romanseries.pdf) / 花粉親不明(PDF に「片親はトキと思われる」との記載あり) |
 | ローズパール | ろーずぱーる | Pink |  |  |  | |
 | 早生ふじ | わせふじ | LightSalmon | wase_fuji | delicious | kokkou | [ふじ(枝変わり) りんご大学](https://www.ringodaigaku.com/main/hinshu/hu/huji_eda.html) / ふじの枝変わり |
