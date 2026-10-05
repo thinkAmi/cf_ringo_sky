@@ -136,6 +136,7 @@
 | ラリタン | らりたん | OldLace |  |  |  | |
 | 凛夏 | りんか | LavenderBlush |  |  |  | [品種登録迅速化総合電子化システム](https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=14918&LANGUAGE=Japanese) |
 | ルビースイート | るびーすいーと | Pink |  |  |  | |
+| レッドキュー | れっどきゅー | Maroon | red_q | kinsei | goshogawara | [レッド キュー 旬の果物百科](https://foodslink.jp/syokuzaihyakka/syun/fruit/apple-RedQ.htm) |
 | レッドゴールド | れっどごーるど | Red |  |  |  | |
 | Rockit | ろきっと | FireBrick |  |  |  | |
 | ロマンのしずく | ろまんのしずく | Khaki | roman_no_shizuku | unknown | shinano_gold | [品種紹介 紅果園](https://kokaen.jp/hinsyu.html) / [ロマンのしずく(高野10号) 紅果園 ロマンシリーズ(PDF)](https://kokaen.jp/pdf/romanseries.pdf) / 花粉親不明(PDF に「片親はトキと思われる」との記載あり) |
