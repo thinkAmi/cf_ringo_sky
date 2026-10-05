@@ -53,7 +53,7 @@
 | 御所川原 | ごしょがわら | Tomato | goshogawara | unknown | unknown | [御所川原 りんご大学](https://www.ringodaigaku.com/main/hinshu/ko/gosyogawara.html) / 交配不明。花粉親をプリトニアとする販売サイトの記述あり([まごころふるさと便](https://furusatobin.jp/gl/shops/ca/61.html)) |
 | ゴールデンデリシャス | ごーるでんでりしゃす | DarkOrange | golden_delicious | unknown | unknown | 青森県のりんご 改訂版 p102 |
 | ゴールドロマン | ごーるどろまん | Yellow | gold_roman | tsugaru | shinano_gold | [品種登録データベース 登録番号20601](https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=20601&LANGUAGE=Japanese) / [ゴールドロマン(高野3号) 紅果園 ロマンシリーズ(PDF)](https://kokaen.jp/pdf/romanseries.pdf) |
-| 彩香 | さいか | FireBrick |  |  |  | |
+| 彩香 | さいか | FireBrick | saika | ourin | akane | [あおり9(旧名:彩香) りんご大学](https://www.ringodaigaku.com/main/hinshu/sa/saika.html) / [弘前経済新聞 2025-10-22](https://hirosaki.keizai.biz/headline/2617/) / 品種名はあおり9。2025年10月28日から流通名はあおり9 |
 | さとあかり | さとあかり | LightSalmon |  |  |  | |
 | サマーチャンス | さまーちゃんす | BlanchedAlmond |  |  |  | |
 | サマーランド | さまーらんど | LightCoral |  |  |  | |
