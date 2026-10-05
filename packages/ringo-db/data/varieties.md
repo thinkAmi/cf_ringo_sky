@@ -40,6 +40,7 @@
 | グラニースミス | ぐらにーすみす | Green |  |  |  | |
 | 恋空 | こいぞら | Rosybrown |  |  |  | |
 | 紅玉 | こうぎょく | Maroon | kougyoku | unknown | unknown | 青森県のりんご 改訂版 p90 |
+| 幸寿 | こうじゅ | Salmon | kouju | unknown | miki_life | [幸寿 りんご大学](https://www.ringodaigaku.com/main/hinshu/ko/kouju.html) / 花粉親は千秋×ふじの未命名系統 |
 | こうたろう | こうたろう | LightSalmon |  |  |  | |
 | 高徳 | こうとく | AntiqueWhite | koutoku | unknown | toukou | [高徳 旬の果物百科](https://foodslink.jp/syokuzaihyakka/syun/fruit/apple-Koutoku.htm) |
 | 昂林 | こうりん | MistyRose | kourin | delicious | kokkou | [昂林 りんご大学](https://www.ringodaigaku.com/main/hinshu/ko/kourin.html) / フジの枝変わり |
