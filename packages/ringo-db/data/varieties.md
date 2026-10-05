@@ -11,6 +11,7 @@
 | Ambrosia | あんぶろしあ | IndianRed |  |  |  | |
 | 祝 | いわい | SpringGreen |  |  |  | |
 | 印度 | いんど | Red | indo | unknown | unknown | [りんごの品種 弘前市りんご公園](https://www.city.hirosaki.aomori.jp/ringopark/hinshu.html) / 青森県のりんご 改訂版 p41 / 偶発実生 |
+| ウースターペアメイン | うーすたーぺあめいん | IndianRed | worcester_pearmain | unknown | devonshire_quarrenden | [Worcester Pearmain National Fruit Collection](https://nationalfruitcollection.org.uk/full2.php?fruit=apple&id=6920) / Devonshire Quarrenden x Unknown |
 | エグレモント・ラセット | えぐれもんとらせっと | Tan |  |  |  | |
 | NJ77349 | えぬじぇーななななさんよんきゅう | Gainsboro | nj77349 | unknown | unknown | [GRIN-Global PI 588819 Vista Bella](https://npgsweb.ars-grin.gov/gringlobal/accessiondetail?id=1003261) / ビスタベラの種子親にあたる未命名の育種選抜系統(67634 x 122137) |
 | 遠山三系 | えんざんさんけい | FireBrick |  |  |  | |
