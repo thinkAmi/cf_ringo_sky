@@ -41,6 +41,7 @@
 | 高徳 | こうとく | AntiqueWhite | koutoku | unknown | toukou | [高徳 旬の果物百科](https://foodslink.jp/syokuzaihyakka/syun/fruit/apple-Koutoku.htm) |
 | 昂林 | こうりん | MistyRose | kourin | delicious | kokkou | [昂林 りんご大学](https://www.ringodaigaku.com/main/hinshu/ko/kourin.html) / フジの枝変わり |
 | 紅露 | こうろ | FloralWhite |  |  |  | |
+| コックスオレンジピピン | こっくすおれんじぴぴん | SandyBrown | cox_orange_pippin | unknown | unknown | [Cox's Orange Pippin National Fruit Collection](https://nationalfruitcollection.org.uk/full2.php?fruit=apple&id=1330) / NFC は Ribston Pippin x Unknown とするが、DNA 解析で異説(Margil の実生)あり([Ribston Pippin Orange Pippin](https://www.orangepippin.com/varieties/apples/ribston-pippin))のため遡らない |
 | 国光 | こっこう | FireBrick | kokkou | unknown | unknown | [りんごの品種 弘前市りんご公園](https://www.city.hirosaki.aomori.jp/ringopark/hinshu.html) / 青森県のりんご 改訂版 p109 / 偶発実生 |
 | KORU | こる | Crimson |  |  |  | |
 | ゴールデンデリシャス | ごーるでんでりしゃす | DarkOrange | golden_delicious | unknown | unknown | 青森県のりんご 改訂版 p102 |
