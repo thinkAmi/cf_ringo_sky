@@ -2,6 +2,7 @@
 |-------|------|-----|------|-------|-------|------|
 | あいかの香り | あいかのかおり | Crimson | aikanokaori | unknown | fuji | [あいかの香り 旬の果物百科](https://foodslink.jp/syokuzaihyakka/syun/fruit/apple-Aikanokaori.htm) |
 | あかぎ | あかぎ | AntiqueWhite | akagi | kougyoku | golden_delicious | [あかぎ りんご大学](https://www.ringodaigaku.com/main/hinshu/a/akagi.html) |
+| あかね | あかね | Crimson | akane | worcester_pearmain | kougyoku | [育成品種紹介 あかね 農研機構](https://www.naro.go.jp/laboratory/nifts/kih/apple_cat/post_12.html) |
 | 秋茜 | あきあかね | FireBrick | akiakane | fuji | golden_delicious | [秋茜 旬の果物百科](https://foodslink.jp/syokuzaihyakka/syun/fruit/apple-Akiakane.htm) / 清明の枝変わり |
 | 秋田ゴールド | あきたごーるど | Goldenrod | akita_gold | fuji | golden_delicious | [アキタゴールド りんご大学](https://www.ringodaigaku.com/main/hinshu/a/akitagold.html) |
 | 秋映 | あきばえ | DarkRed | akibae | tsugaru | senshu | [秋映 旬の果物百科](https://foodslink.jp/syokuzaihyakka/syun/fruit/akibae.htm) |
